@@ -59,7 +59,7 @@ This section provides an overview of the primary tools you'll be using for the G
 *   **Learn More**:
     *   [Lightspark Website](https://www.lightspark.com/)
     *   [Lightspark Documentation](https://docs.lightspark.com/)
-    *   [Lightspark SDK Quickstart](https://docs.lightspark.com/lightspark-sdk/quickstart)
+    *   [Lightspark SDK Getting Started](https://docs.lightspark.com/lightspark-sdk/getting-started)
     *   [Lightspark Spark CLI Tool](https://docs.lightspark.com/get-started/stack/spark)
 
 ## 5. FewSats
