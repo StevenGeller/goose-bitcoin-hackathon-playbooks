@@ -1,6 +1,6 @@
 # Best Practices for Hackathon Development
 
-Building robust and secure applications, even within the time constraints of a hackathon, is crucial, especially when dealing with AI and cryptocurrency.
+Building robust and secure applications, even within the time constraints of a hackathon, is crucial, especially when dealing with AI and bitcoin.
 
 ## 1. Effectively Using Block Goose & LLMs
 
