@@ -31,7 +31,7 @@ This section provides an overview of the primary tools you'll be using for the G
     *   [Blog: Introducing the Alby Wallet API](https://blog.getalby.com/introducing-the-alby-wallet-api/)
     *   [Blog: Alby Wallet API Community SDKs](https://blog.getalby.com/introducing-alby-wallet-api-community-sdks/)
     *   [Alby Hub (Explore Alby projects & resources)](https://albyhub.com/)
-    *   [Alby Postman Workspace (for API testing)](https://www.postman.com/alby/workspace/alby-s-public-workspace/overview)
+    *   [Alby Postman Profile (for API testing)](https://www.postman.com/getalby)
 
 ## 3. Lightning Dev Kit (LDK) by Spiral (Block)
 
@@ -60,7 +60,7 @@ This section provides an overview of the primary tools you'll be using for the G
     *   [Lightspark Website](https://www.lightspark.com/)
     *   [Lightspark Documentation](https://docs.lightspark.com/)
     *   [Lightspark SDK Quickstart](https://docs.lightspark.com/lightspark-sdk/quickstart)
-    *   [Lightspark Spark CLI Tool](https://docs.lightspark.com/spark/installation) (Or check main docs for Spark info)
+    *   [Lightspark Spark CLI Tool](https://docs.lightspark.com/get-started/stack/spark)
 
 ## 5. FewSats
 
@@ -78,12 +78,24 @@ This section provides an overview of the primary tools you'll be using for the G
 
 ## 6. Lexe
 
-*   **What it is**: Lexe is a self-custodial Bitcoin and Lightning wallet that supports 24/7 payments.
+*   **What it is**: Lexe is a self-custodial Bitcoin and Lightning wallet available for iOS and Android, emphasizing user control, privacy, and a rich feature set.
 *   **Key Features**:
-    *   User-facing wallet for Bitcoin and Lightning.
-    *   Self-custodial, giving users control over their keys.
-*   **Why use it in a hackathon?**: Lexe can serve as an excellent user-facing wallet for testing transactions and demonstrating the end-user experience of your project. As previously noted, it currently lacks a public API, which limits its use for deep backend integration.
+    *   **Self-Custodial**: Users have full control over their keys.
+    *   **User-Facing Wallet**: Designed for sending/receiving Bitcoin and Lightning payments.
+    *   **Nostr Integration**: Supports Nostr zaps and NIP-07 for browser extension interactions.
+    *   **LNURL & WebLN**: Broad compatibility with Lightning services.
+    *   **Tor Support**: Enhanced privacy through optional Tor integration.
+    *   **Value 4 Value**: Built with Value 4 Value streaming payments in mind.
+    *   **Run Your Own Lexe Server**: For advanced users, Lexe allows connection to a self-hosted Lexe server for maximum sovereignty.
+*   **Why use it in a hackathon?**:
+    *   Excellent as a **user-facing wallet** for testing transactions to/from your hackathon project.
+    *   Demonstrates a **privacy-focused, feature-rich self-custodial wallet experience**.
+    *   Its WebLN support might allow for some browser-based interactions if your dApp uses WebLN.
+*   **Integration Nuances for Hackathons**:
+    *   **No General Public API for Third-Party Apps**: Lexe is primarily a standalone wallet. It does not currently offer a general-purpose, developer-focused API similar to Alby's for building backend integrations into *other* applications.
+    *   Its strength lies in its feature set as a *user's personal wallet* or for interactions via established protocols like LNURL, Nostr, and WebLN.
 *   **Learn More**:
     *   [Lexe Website](https://lexe.app/)
+    *   [Lexe Public GitHub (Issue Tracking & Discussion)](https://github.com/lexe-app/lexe-public)
 
 By understanding these tools and their specific strengths, you can better architect your hackathon project and leverage their combined power to create something truly innovative!

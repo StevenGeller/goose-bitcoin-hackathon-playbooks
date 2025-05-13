@@ -66,12 +66,23 @@ goose run --query "Write a Python script that prints numbers from 1 to 10."
 
 Goose will then interact with your configured LLM to generate the script, and may ask for clarifications or offer to execute/save the code.
 
-## 4. Troubleshooting
+## 4. Best Practices for Using Goose
+
+To make the most of Block Goose and the underlying LLM during the hackathon, refer to the **"Effectively Using Block Goose & LLMs"** section in our [Best Practices Guide](../Best-Practices.md). This section covers crucial tips on:
+*   Crafting effective queries (prompts).
+*   Iterating and refining Goose's output.
+*   Breaking down complex tasks.
+*   The importance of critically reviewing and testing all AI-generated code.
+
+Following these practices will significantly enhance your productivity and the quality of your project.
+
+## 5. Troubleshooting
 
 *   **Command not found (`goose`)**: Ensure `~/.local/bin` (or the installation directory) is in your `PATH`. You might need to restart your terminal or source your shell profile file (e.g., `~/.bashrc`, `~/.zshrc`).
-*   **API Key Issues**: Double-check that your LLM API key is correct and has the necessary permissions/credits.
+*   **API Key Issues**: Double-check that your LLM API key is correct and has the necessary permissions/credits. Ensure it's correctly set as an environment variable or through Goose's configuration.
 *   **Connectivity**: Ensure you have an active internet connection for Goose to communicate with the LLM provider.
 
 For more detailed information, always refer to the official Block Goose documentation on GitHub:
+*   [Block Goose Official Site](https://block.github.io/goose/)
 *   [Block Goose GitHub Repository](https://github.com/block/goose)
 *   Look for `docs` folder or `README.md` for setup and usage instructions.

@@ -18,11 +18,12 @@ This playbook outlines how to create a tool that automates the setup and configu
 
 ## 3. Key Roles of Tools
 
-*   **Block Goose Role**: Automates the setup process by:
-    *   Generating installation scripts for the chosen Lightning node software.
-    *   Writing scripts to create and manage configuration files (e.g., `lnd.conf`).
-    *   Scripting interactions with the node's CLI (e.g., `lncli`) for tasks like opening channels, checking balances, or managing liquidity.
-    *   Potentially creating a simple user interface (CLI-based or web) to guide the setup.
+*   **Block Goose Role**: Assists in automating the setup process by:
+    *   Generating draft installation scripts for chosen Lightning node software (e.g., LND, CLN).
+    *   Helping write scripts to create and manage configuration files (e.g., `lnd.conf`, `bitcoin.conf`).
+    *   Assisting in scripting interactions with the node's CLI (e.g., `lncli`, `lightning-cli`) for tasks like wallet creation, opening channels, or checking balances.
+    *   Providing code snippets for a simple user interface (CLI-based or basic web) to guide the setup.
+    *   **Important Reminder**: Node setup scripts can be complex and system-dependent. Always critically review, understand, and thoroughly test any scripts or configuration files generated or modified with Goose's help. Refer to the "Effectively Using Block Goose & LLMs" section in the main [Best Practices Guide](../COMMON/Best-Practices.md).
 *   **Alby Role**: Serves as a user-friendly wallet to:
     *   Fund the new Lightning node with some initial satoshis.
     *   Test sending payments from the new node to an Alby wallet.
@@ -32,8 +33,8 @@ This playbook outlines how to create a tool that automates the setup and configu
 
 ### Step 1: Setup Environment
 
-*   **Block Goose**: Installed and configured. See [Goose Setup Guide](../../COMMON/Setup-Guides/Goose-Setup.md).
-*   **Alby**: Account ready for testing. See [Alby Setup Guide](../../COMMON/Setup-Guides/Alby-Setup.md).
+*   **Block Goose**: Installed and configured. See [Goose Setup Guide](../COMMON/Setup-Guides/Goose-Setup.md).
+*   **Alby**: Account ready for testing. See [Alby Setup Guide](../COMMON/Setup-Guides/Alby-Setup.md).
 *   **Choose Lightning Implementation**: Decide which node software to automate (LND and Core Lightning are common choices with good CLI support. LDK is good if you want to build a custom node solution).
     *   [LND](https://github.com/lightningnetwork/lnd)
     *   [Core Lightning (CLN)](https://github.com/ElementsProject/lightning)
@@ -75,15 +76,15 @@ This playbook outlines how to create a tool that automates the setup and configu
 
 ## 5. Optional Integrations & Extensions
 
-*   **Lightspark**: If aiming for a more managed or scalable node solution as part of the automation, Lightspark's infrastructure could be integrated. See [Extending with Other Tools](../../COMMON/Extending-with-Other-Tools.md).
-*   **Lexe**: Use Lexe as an alternative wallet for testing sending/receiving. See [Extending with Other Tools](../../COMMON/Extending-with-Other-Tools.md).
+*   **Lightspark**: If aiming for a more managed or scalable node solution as part of the automation, Lightspark's infrastructure could be integrated. See [Extending with Other Tools](../COMMON/Extending-with-Other-Tools.md).
+*   **Lexe**: Use Lexe as an alternative wallet for testing sending/receiving. See [Extending with Other Tools](../COMMON/Extending-with-Other-Tools.md).
 *   **Web Interface**: Create a simple web frontend (Goose could help generate HTML/JS/Python Flask code) to control the automation scripts.
 *   **Automated Channel Management**: Scripts for rebalancing channels or finding good peers.
 *   **Monitoring**: Integrate with monitoring tools or script basic health checks.
 
 ## 6. Best Practices
 
-*   **Security**: Emphasize secure handling of wallet passwords, seed phrases, and API keys if applicable. See [Best Practices Guide](../../COMMON/Best-Practices.md).
+*   **Security**: Emphasize secure handling of wallet passwords, seed phrases, and API keys if applicable. See [Best Practices Guide](../COMMON/Best-Practices.md).
 *   **Idempotency**: Design scripts to be runnable multiple times without causing issues (e.g., check if software is already installed).
 *   **User Guidance**: Provide clear instructions and feedback to the user throughout the automated process.
 

@@ -18,7 +18,7 @@ This page provides links to valuable external resources, including official docu
 *   **[Alby Hub](https://albyhub.com/)**: Explore Alby-related projects, news, and resources.
 *   **[Alby JS SDK (npm)](https://www.npmjs.com/package/alby-js-sdk)**: Official JavaScript SDK.
 *   **[Alby JS SDK (GitHub)](https://github.com/getAlby/alby-js-sdk)**: Source code for the JavaScript SDK.
-*   **[Alby Postman Workspace](https://www.postman.com/alby/workspace/alby-s-public-workspace/overview)**: For easy testing of Alby API endpoints.
+*   **[Alby Postman Profile (Collections)](https://www.postman.com/getalby)**: For easy testing of Alby API endpoints.
 
 ### Lightning Dev Kit (LDK) - by Spiral (Block)
 *   **[Lightning Dev Kit Official Website](https://lightningdevkit.org/)**: Best place to start for LDK. Contains overview, documentation, and use cases.
@@ -31,7 +31,7 @@ This page provides links to valuable external resources, including official docu
 *   **[Lightspark Documentation](https://docs.lightspark.com/)**: Main entry point for all Lightspark documentation.
 *   **[Lightspark SDKs - Quickstart](https://docs.lightspark.com/lightspark-sdk/quickstart)**: Get started quickly with Lightspark SDKs in various languages.
 *   **[Lightspark SDKs - Overview](https://docs.lightspark.com/lightspark-sdk/sdks-overview)**: Information on available SDKs (Python, JavaScript, Java, Kotlin, Swift, Go, Rust).
-*   **[Spark CLI Tool](https://docs.lightspark.com/spark/installation)**: Documentation for Lightspark's command-line tool "Spark" for managing accounts and nodes. (Verify this link path on their main docs site if it changes).
+*   **[Spark CLI Tool](https://docs.lightspark.com/get-started/stack/spark)**: Documentation for Lightspark's command-line tool "Spark" for managing accounts and nodes. (Verify this link path on their main docs site if it changes).
 *   **[Lightspark API Reference](https://docs.lightspark.com/api-reference/introduction)**: For direct API integration.
 
 ### FewSats
@@ -41,7 +41,8 @@ This page provides links to valuable external resources, including official docu
 *   Check their GitHub repositories for the most current documentation and examples.
 
 ### Lexe
-*   **[Lexe Website](https://lexe.app/)**: Official website for the Lexe wallet.
+*   **[Lexe Website](https://lexe.app/)**: Official website for the Lexe self-custodial Bitcoin and Lightning wallet (iOS & Android).
+*   **[Lexe Public GitHub](https://github.com/lexe-app/lexe-public)**: For community discussions, feature requests, and issue tracking. Provides insight into features like Tor, LNURL, WebLN, and Nostr support.
 
 ## Bitcoin & Lightning Network Development (General)
 
