@@ -96,4 +96,4 @@ This playbook describes how to develop an AI-driven wallet assistant that helps 
 *   **User Guidance**: Help users understand what commands are supported.
 *   **Error Handling**: Robustly handle errors from NLU, API calls, etc.
 
-This project allows for a lot of creativity in how AI can make cryptocurrency interactions more seamless and accessible.
+This project allows for a lot of creativity in how AI can make bitcoin interactions more seamless and accessible.
