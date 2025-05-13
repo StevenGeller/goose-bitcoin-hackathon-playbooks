@@ -55,9 +55,7 @@ Everything you need is organized for easy access:
 
 These playbooks are for the community. If you have suggestions, find errors (like broken links!), or want to contribute improvements, please open an issue or submit a pull request. Let's make this the best hackathon resource possible!
 
-## Target Repository
 
-This content is proudly hosted at [https://github.com/StevenGeller/goose-bitcoin-hackathon-playbooks](https://github.com/StevenGeller/goose-bitcoin-hackathon-playbooks).
 
 ---
 
