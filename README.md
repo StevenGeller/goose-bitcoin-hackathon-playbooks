@@ -45,11 +45,11 @@ Everything you need is organized for easy access:
 4.  **Gear Up**: Follow the relevant **[Setup Guides](./PLAYBOOKS/COMMON/Setup-Guides/)** for Goose, Alby, and any other tools you'll use.
 5.  **Dive In & Build!**: Use the playbooks to guide your development, and don't forget to innovate and have fun!
 
-## Why Goose + Bitcoin? 🤔
+## Why Goose + Bitcoin for this Hackathon? 🤔
 
-*   **Rapid Bitcoin/Lightning Prototyping**: Utilize Goose to generate protocol-specific code (e.g., Bitcoin transaction scripts, Lightning invoice logic), automate node configurations (LND, CLN, LDK), and quickly build functional application backbones.
-*   **Automated Value Exchange**: Embed Bitcoin and Lightning Network capabilities directly into Goose-driven workflows for seamless, programmatic value transfer, enabling use cases like automated payouts for AI-completed tasks or metered API access.
-*   **Novel Application Paradigms**: Engineer unique solutions by combining Goose's AI-driven automation with Bitcoin's decentralized ledger and Lightning's micropayment capabilities—think AI agents managing autonomous payment channels or decentralized services monetized via instant Bitcoin transactions.
+*   **Accelerate Prototyping with Playbook-Driven Development**: Use Goose, guided by the detailed examples in these playbooks (e.g., `01-AI-Powered-Bitcoin-Tip-Bot`, `02-Automated-Lightning-Node-Setup`), to rapidly generate Bitcoin/Lightning-specific code, automate tedious configurations, and scaffold core application components. This means less time on boilerplate and more time iterating on your unique hackathon idea.
+*   **Rapidly Implement Advanced Bitcoin/Lightning Features**: Leverage Goose to quickly integrate complex functionalities showcased in our playbooks—such as LDK node mechanics, Alby wallet interactions, or AI-driven payment logic. What might take days of research can be prototyped in hours, giving you a competitive edge.
+*   **Build More Ambitious Projects, Faster**: These playbooks provide the strategic starting points. Goose acts as your AI co-developer to extend these foundations, enabling you to tackle more ambitious concepts and deliver a more polished, feature-rich project within the demanding timeframe of the hackathon.
 
 ## Contributing 🤝
 
