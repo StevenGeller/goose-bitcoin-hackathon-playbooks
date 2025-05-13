@@ -47,7 +47,7 @@ Common providers include:
 When you first run Goose (CLI or Desktop), it will typically prompt you to configure your LLM provider and enter your API key. Follow the on-screen instructions.
 
 **Example (CLI)**:
-If you run a command like `goose run --query "hello"` for the first time without configuration, Goose should guide you through the setup process.
+If you're using the Goose CLI, running `goose s` for the first time without prior LLM configuration should guide you through the setup process within its command-line interface. You will likely be prompted to configure your LLM provider when `goose s` starts or when you attempt your first task within the Goose session.
 
 You may need to set environment variables for your LLM API key, for example:
 ```bash
