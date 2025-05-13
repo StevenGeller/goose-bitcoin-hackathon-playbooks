@@ -1,0 +1,90 @@
+# Playbook: AI-Powered Bitcoin Tip Bot
+
+This playbook guides you through building an AI-Powered Bitcoin Tip Bot that allows users to tip Bitcoin on social media or chat platforms using Alby for payments and Block Goose for automating the bot's logic.
+
+## 1. Project Overview
+
+*   **Description**: Build a bot that interprets tipping commands (e.g., "tip @user 1000 sats") on a platform like Discord or X (formerly Twitter). The bot will then use Alby's Wallet API to process the Bitcoin (Lightning) payment.
+*   **Core Components**:
+    *   **Platform Integration**: Interface for receiving commands (e.g., Discord API, Twitter API).
+    *   **Command Parser**: Logic to understand user messages and extract recipient and amount.
+    *   **Payment Processor**: Integration with Alby to send tips.
+    *   **AI Automation (Block Goose)**: To script interactions, manage backend logic, and potentially generate parts of the code.
+
+## 2. Why This Project?
+
+*   **Combines AI and Crypto**: A hot intersection in tech.
+*   **Practical Application**: Demonstrates real-world use of micropayments.
+*   **Engaging**: Fun to build and demonstrate.
+*   **Scalable Complexity**: Can be kept simple for a hackathon or expanded with more features.
+
+## 3. Key Roles of Tools
+
+*   **Block Goose Role**: Automates the bot’s backend logic, such as:
+    *   Parsing incoming messages/commands.
+    *   Generating code for handling different commands.
+    *   Integrating with the chosen social/chat platform's API.
+    *   Orchestrating the interaction with Alby's API.
+*   **Alby Role**: Handles the Bitcoin/Lightning transactions using its Wallet API, allowing users to send and receive tips with their Alby wallets.
+
+## 4. Technical Guide
+
+### Step 1: Setup Environment
+
+*   **Block Goose**: Ensure Goose is installed and configured. See [Goose Setup Guide](../../COMMON/Setup-Guides/Goose-Setup.md).
+*   **Alby**: Sign up for Alby and get your API credentials. See [Alby Setup Guide](../../COMMON/Setup-Guides/Alby-Setup.md).
+*   **Node.js & npm** (for the starter code): Install Node.js (which includes npm) if you don't have it: [https://nodejs.org/](https://nodejs.org/)
+*   **Platform Account**: Create a developer account for the platform you want to integrate with (e.g., Discord Bot application, Twitter Developer App).
+
+### Step 2: Platform Integration
+
+*   Choose your platform (Discord is often a good starting point for bots).
+*   Use the platform's SDK/API to listen for messages or commands.
+*   **Goose Task Example**: `goose run --query "Write a Python script using discord.py to listen for messages in a specific channel that start with '!tip'"`
+
+### Step 3: Command Parsing
+
+*   Develop logic to parse messages that look like tip commands (e.g., `!tip @username 1000`).
+*   Extract the recipient and the amount.
+*   Refer to the `parseTipCommand` function in the [JavaScript starter code](./starter-code/javascript/README.md) for an example.
+*   **Goose Task Example**: `goose run --query "Write a Python function to parse a string like '!tip @bob 500 ananas' and extract the recipient (bob), amount (500), and an optional memo (ananas)"`
+
+### Step 4: Alby Integration for Payments
+
+*   Use Alby's API (or SDK) to initiate payments.
+*   You'll typically need a Lightning Invoice from the recipient. For a hackathon, you might initially simulate this or have pre-defined recipient invoices.
+    *   **Challenge**: How will the bot get the recipient's Lightning invoice? (e.g., user DMs it to the bot, bot looks it up in a database associated with the platform username, recipient has it in their platform profile).
+*   Refer to the `sendTip` function in the [JavaScript starter code](./starter-code/javascript/README.md).
+*   **Goose Task Example**: `goose run --query "Show me how to make a POST request in Python to Alby's sendPayment endpoint, including setting the correct headers for authorization and the JSON body with a paymentRequest."`
+
+### Step 5: Putting It All Together
+
+1.  Bot listens for messages.
+2.  If a message is a tip command, parse it.
+3.  Obtain the recipient's Lightning invoice.
+4.  Use Alby to pay the invoice.
+5.  Send a confirmation message back to the platform.
+
+## 5. Starter Code
+
+A JavaScript starter code example is provided to demonstrate command parsing and Alby API interaction.
+
+*   **Location**: [`./starter-code/javascript/`](./starter-code/javascript/)
+*   **Includes**: Functions for parsing a tip command and sending a payment via Alby.
+*   **Note**: This is a starting point. You'll need to integrate it with your chosen platform's API and handle API key security properly.
+
+## 6. Optional Integrations & Extensions
+
+*   **FewSats**: If your bot involves multiple AI components that need to transact with each other (e.g., one AI determines the tip amount, another processes it), FewSats could manage these inter-agent payments. See [FewSats Setup Guide](../../COMMON/Setup-Guides/FewSats-Setup.md).
+*   **Lightspark**: If you anticipate very high volumes of tips and need robust, scalable Lightning infrastructure, consider Lightspark. See [Extending with Other Tools](../../COMMON/Extending-with-Other-Tools.md).
+*   **Database**: Store user preferences, recipient Lightning addresses, or transaction history.
+*   **Enhanced Commands**: Support tipping in different currencies (Goose can help with conversion logic), scheduled tips, or tipping multiple users.
+*   **Notifications**: More sophisticated user notifications.
+
+## 7. Best Practices
+
+*   **Security**: Crucial for a payment bot. Securely manage API keys (use environment variables or a secure vault, DO NOT hardcode them). Validate all inputs. See [Best Practices Guide](../../COMMON/Best-Practices.md).
+*   **User Experience**: Clear commands, feedback, and error messages.
+*   **Error Handling**: Gracefully handle API errors from Alby or the platform.
+
+Good luck building your AI-Powered Bitcoin Tip Bot!

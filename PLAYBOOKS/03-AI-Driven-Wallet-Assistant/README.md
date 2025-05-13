@@ -1,0 +1,98 @@
+# Playbook: AI-Driven Wallet Assistant
+
+This playbook describes how to develop an AI-driven wallet assistant that helps users manage their Bitcoin wallet (via Alby) by interpreting natural language commands, with Block Goose building the AI logic.
+
+## 1. Project Overview
+
+*   **Description**: Create an assistant (e.g., a chatbot, a voice-controlled app, or a CLI tool) that allows users to interact with their Alby Bitcoin/Lightning wallet using natural language. For example, "Send 500 sats to Alice" or "What's my current balance?"
+*   **Core Components**:
+    *   **Natural Language Understanding (NLU)**: A module to interpret user commands.
+    *   **AI Logic (Block Goose)**: To process commands, map them to Alby API actions, and generate responses.
+    *   **Alby Wallet Integration**: To execute wallet operations like sending payments, checking balances, or generating invoices.
+    *   **User Interface**: How the user interacts with the assistant.
+
+## 2. Why This Project?
+
+*   **User-Friendly Crypto**: Makes interacting with a Bitcoin wallet more intuitive, especially for less technical users.
+*   **Showcases AI in Action**: Demonstrates practical application of AI for task automation in a crypto context.
+*   **Innovative UX**: Explores new ways to manage digital assets.
+
+## 3. Key Roles of Tools
+
+*   **Block Goose Role**: Builds the core AI logic by:
+    *   Generating code for the Natural Language Understanding (NLU) component (or integrating with an NLU service).
+    *   Interpreting the intent and entities from user commands (e.g., intent: `send_payment`, entities: `amount: 500 sats`, `recipient: Alice`).
+    *   Mapping these intents to specific Alby Wallet API calls.
+    *   Formatting data for API requests and parsing API responses.
+    *   Generating user-friendly responses.
+*   **Alby Role**: Executes the actual wallet operations via its API:
+    *   Sending payments.
+    *   Retrieving balance information.
+    *   Generating invoices.
+    *   Fetching transaction history.
+
+## 4. Technical Guide
+
+### Step 1: Setup Environment
+
+*   **Block Goose**: Installed and configured. See [Goose Setup Guide](../../COMMON/Setup-Guides/Goose-Setup.md).
+*   **Alby**: Account and API credentials ready. See [Alby Setup Guide](../../COMMON/Setup-Guides/Alby-Setup.md).
+*   **Programming Language**: Choose a language for your assistant (Python is excellent for NLU tasks, Node.js is good for Alby SDK).
+*   **(Optional) NLU Library/Service**: Consider libraries like spaCy (Python), NLTK (Python), or simple regex for basic command parsing. For more advanced NLU, you might explore cloud services (though this adds complexity for a hackathon).
+
+### Step 2: Designing User Interaction & Commands
+
+*   Define the scope of commands your assistant will understand, for example:
+    *   `"Send [amount] sats to [recipient_alias/lightning_address]"`
+    *   `"Pay invoice [bolt11_invoice]"`
+    *   `"What is my balance?"`
+    *   `"Generate an invoice for [amount] sats with memo [memo]"`
+    *   `"Show my last 5 transactions."`
+*   **Goose Task (Conceptual)**: `goose run --query "Design a JSON structure to represent parsed user commands for a Bitcoin wallet assistant, including intent, amount, recipient, and memo fields."`
+
+### Step 3: Building the NLU Component (with Goose)
+
+*   **Simple Approach (Regex)**: For a limited command set, regex can be effective.
+    *   **Goose Task**: `goose run --query "Write a Python function using regex to parse commands like 'send X sats to Y' and extract X (amount) and Y (recipient)."`
+*   **Advanced Approach (NLU Library - e.g., spaCy)**:
+    *   Train a simple model or use rule-based matching for intent recognition and entity extraction.
+    *   **Goose Task**: `goose run --query "Show me a basic Python example using spaCy to identify entities like AMOUNT and RECIPIENT from a sentence like 'Please send 1000 satoshis to Bob via Lightning'."`
+
+### Step 4: Mapping Commands to Alby API Actions (with Goose)
+
+*   Once a command is parsed, your application logic (potentially generated or assisted by Goose) will determine which Alby API endpoint to call.
+    *   `send_payment` intent -> `albyClient.sendPayment({ invoice: ... })`
+    *   `check_balance` intent -> `albyClient.getBalance()`
+    *   `generate_invoice` intent -> `albyClient.createInvoice({ amount: ..., description: ... })`
+    *   `list_transactions` intent -> `albyClient.getPayments({ limit: ..., offset: ..., direction: ...})` (or similar, check Alby API docs for exact methods)
+*   **Goose Task**: `goose run --query "Write a Python function that takes a parsed command object (intent, entities) and calls the appropriate Alby SDK function. For example, if intent is 'send_payment', it should call a mock send_payment function with entity details."`
+
+### Step 5: Handling API Responses and User Feedback
+
+*   After calling an Alby API, process the response.
+*   Provide clear feedback to the user (success, failure, confirmation details).
+*   **Goose Task**: `goose run --query "Given a successful JSON response from Alby's sendPayment API, write a Python function to extract the payment hash and amount, and formulate a success message for the user."`
+
+### Step 6: User Interface
+
+*   **CLI**: Simplest to implement for a hackathon.
+    *   **Goose Task**: `goose run --query "Write a basic Python CLI application that takes user input, passes it to a mock NLU function, and prints the parsed command."`
+*   **Chatbot**: Integrate with Discord, Slack, Telegram (more complex).
+*   **Web UI**: A simple HTML page with an input field (Goose can help generate basic HTML/JS).
+
+## 5. Optional Integrations & Extensions
+
+*   **FewSats**: If the AI assistant itself needs to pay for services (e.g., a premium NLU API, or data from another AI agent), FewSats could manage these payments. See [FewSats Setup Guide](../../COMMON/Setup-Guides/FewSats-Setup.md).
+*   **Lexe**: Use Lexe as a user-facing wallet to test the assistant's interactions. See [Extending with Other Tools](../../COMMON/Extending-with-Other-Tools.md).
+*   **Contact Book**: Allow users to save recipient aliases (e.g., "Alice" maps to a Lightning Address or Node ID).
+*   **Recurring Payments**: `"Send 100 sats to Bob every Friday."`
+*   **Voice Input**: Integrate with speech-to-text services.
+
+## 6. Best Practices
+
+*   **Security**: Crucial. Secure Alby API keys. Confirm high-value transactions with the user before sending. See [Best Practices Guide](../../COMMON/Best-Practices.md).
+*   **Clarity in NLU**: Start with a small, well-defined set of commands. Natural language can be ambiguous.
+*   **User Guidance**: Help users understand what commands are supported.
+*   **Error Handling**: Robustly handle errors from NLU, API calls, etc.
+
+This project allows for a lot of creativity in how AI can make cryptocurrency interactions more seamless and accessible.
