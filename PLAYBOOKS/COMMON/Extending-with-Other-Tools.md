@@ -14,11 +14,8 @@ While Block Goose and Alby form the core of many project ideas in these playbook
 *   **How to Integrate**:
     *   **SDKs**: Lightspark offers comprehensive SDKs for various programming languages (Python, JavaScript, Java, Kotlin, Swift, Go, Rust). These are the primary way to integrate Lightspark into your application backend.
         *   Start with the [Lightspark SDK Quickstart](https://docs.lightspark.com/lightspark-sdk/quickstart).
-        *   Explore [SDKs Overview](https://docs.lightspark.com/lightspark-sdk/sdks-overview) for language-specific details.
     *   **Spark CLI**: The `spark` command-line tool allows you to manage your Lightspark account, nodes, and perform operations like sending/receiving payments. Useful for testing, scripting, or administrative tasks.
-        *   See [Spark CLI Documentation](https://docs.lightspark.com/get-started/stack/spark).
     *   **APIs**: Underlying the SDKs are robust APIs, which you can also interact with directly if needed.
-        *   Refer to the [Lightspark API Reference](https://docs.lightspark.com/api-reference/introduction).
     *   **Block Goose Role**: Goose can help generate client code for Lightspark SDKs/APIs in your chosen language or assist in scripting `spark` CLI commands.
         *   Example: `Goose Task Example: Show me a Python snippet to send a payment using the Lightspark SDK, given an invoice and API credentials.`
 *   **Example Scenario**: An AI-driven content platform where users pay micropayments for articles or features. Lightspark can provide a scalable and reliable backend to handle numerous small payments without requiring you to manage individual Lightning channels or liquidity.

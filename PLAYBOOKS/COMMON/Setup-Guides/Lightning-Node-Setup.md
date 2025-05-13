@@ -46,7 +46,6 @@ LDK is different from full node implementations. It's a set of tools and librari
 *   **Learn More**:
     *   **[Lightning Dev Kit Official Website](https://lightningdevkit.org/)**
     *   **[LDK GitHub Repository (rust-lightning)](https://github.com/lightningdevkit/rust-lightning)**
-    *   **[LDK Documentation Portal](https://lightningdevkit.org/documentation/)**
 
 **Considerations for LDK in a Hackathon**: Excellent for projects wanting unique Lightning interactions, custom UIs for channel management, or a non-custodial approach embedded in the app. Steeper learning curve than using an API like Alby's, but more flexible than setting up LND/CLN if you don't need a full routing node.
 

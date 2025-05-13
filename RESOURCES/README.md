@@ -23,16 +23,12 @@ This page provides links to valuable external resources, including official docu
 ### Lightning Dev Kit (LDK) - by Spiral (Block)
 *   **[Lightning Dev Kit Official Website](https://lightningdevkit.org/)**: Best place to start for LDK. Contains overview, documentation, and use cases.
 *   **[LDK GitHub Repository (rust-lightning)](https://github.com/lightningdevkit/rust-lightning)**: The core Rust implementation of LDK.
-*   **[LDK Documentation Portal](https://lightningdevkit.org/documentation/)**: Links to detailed docs for LDK and its language bindings.
 *   **[Spiral (Block) Open Source Projects](https://block.xyz/open-source)**: LDK is a key project from Spiral.
 
 ### Lightspark
 *   **[Lightspark Website](https://www.lightspark.com/)**: Official website.
 *   **[Lightspark Documentation](https://docs.lightspark.com/)**: Main entry point for all Lightspark documentation.
 *   **[Lightspark SDKs - Quickstart](https://docs.lightspark.com/lightspark-sdk/quickstart)**: Get started quickly with Lightspark SDKs in various languages.
-*   **[Lightspark SDKs - Overview](https://docs.lightspark.com/lightspark-sdk/sdks-overview)**: Information on available SDKs (Python, JavaScript, Java, Kotlin, Swift, Go, Rust).
-*   **[Spark CLI Tool](https://docs.lightspark.com/get-started/stack/spark)**: Documentation for Lightspark's command-line tool "Spark" for managing accounts and nodes. (Verify this link path on their main docs site if it changes).
-*   **[Lightspark API Reference](https://docs.lightspark.com/api-reference/introduction)**: For direct API integration.
 
 ### FewSats
 *   **[FewSats Website](https://www.fewsats.com/)**: Official website.
@@ -49,7 +45,6 @@ This page provides links to valuable external resources, including official docu
 *   **[Mastering Bitcoin by Andreas M. Antonopoulos](https://github.com/bitcoinbook/bitcoinbook)**: A comprehensive book on Bitcoin (Open Edition available on GitHub).
 *   **[Mastering the Lightning Network by Andreas M. Antonopoulos, Olaoluwa Osuntokun, René Pickhardt](https://github.com/lnbook/lnbook)**: A comprehensive book on the Lightning Network (Open Edition available on GitHub).
 *   **[Bitcoin StackExchange](https://bitcoin.stackexchange.com/)**: Q&A site for Bitcoin-related questions.
-*   **[Lightning Network StackExchange](https://lightning.stackexchange.com/)**: Q&A site for Lightning Network questions.
 *   **[Bitcoin Optech](https://bitcoinops.org/)**: Technical newsletters, field guides, and workshops for Bitcoin development.
 *   **[Bitcoin Core](https://bitcoincore.org/)**: Official website for Bitcoin Core, the reference implementation.
 
