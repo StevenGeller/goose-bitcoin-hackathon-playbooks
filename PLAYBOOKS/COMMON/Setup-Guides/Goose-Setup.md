@@ -60,9 +60,7 @@ Refer to the official Block Goose documentation for the most up-to-date and deta
 
 Once installed and configured, you can use the Goose CLI to automate tasks. For example, to ask Goose to write a Python script:
 
-```bash
-goose run --query "Write a Python script that prints numbers from 1 to 10."
-```
+Goose Task Example: Write a Python script that prints numbers from 1 to 10.
 
 Goose will then interact with your configured LLM to generate the script, and may ask for clarifications or offer to execute/save the code.
 

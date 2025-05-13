@@ -41,14 +41,14 @@ This playbook guides you through building an AI-Powered Bitcoin Tip Bot that all
 
 *   Choose your platform (Discord is often a good starting point for bots).
 *   Use the platform's SDK/API to listen for messages or commands.
-*   **Goose Task Example**: `goose run --query "Write a Python script using discord.py to listen for messages in a specific channel that start with '!tip'"`
+*   **Goose Task Example**: `Write a Python script using discord.py to listen for messages in a specific channel that start with '!tip'`
 
 ### Step 3: Command Parsing
 
 *   Develop logic to parse messages that look like tip commands (e.g., `!tip @username 1000`).
 *   Extract the recipient and the amount.
 *   Refer to the `parseTipCommand` function in the [JavaScript starter code](./starter-code/javascript/README.md) for an example.
-*   **Goose Task Example**: `goose run --query "Write a Python function to parse a string like '!tip @bob 500 ananas' and extract the recipient (bob), amount (500), and an optional memo (ananas)"`
+*   **Goose Task Example**: `Write a Python function to parse a string like '!tip @bob 500 ananas' and extract the recipient (bob), amount (500), and an optional memo (ananas)`
 
 ### Step 4: Alby Integration for Payments
 
@@ -56,7 +56,7 @@ This playbook guides you through building an AI-Powered Bitcoin Tip Bot that all
 *   You'll typically need a Lightning Invoice from the recipient. For a hackathon, you might initially simulate this or have pre-defined recipient invoices.
     *   **Challenge**: How will the bot get the recipient's Lightning invoice? (e.g., user DMs it to the bot, bot looks it up in a database associated with the platform username, recipient has it in their platform profile).
 *   Refer to the `sendTip` function in the [JavaScript starter code](./starter-code/javascript/README.md).
-*   **Goose Task Example**: `goose run --query "Show me how to make a POST request in Python to Alby's sendPayment endpoint, including setting the correct headers for authorization and the JSON body with a paymentRequest."`
+*   **Goose Task Example**: `Show me how to make a POST request in Python to Alby's sendPayment endpoint, including setting the correct headers for authorization and the JSON body with a paymentRequest.`
 
 ### Step 5: Putting It All Together
 

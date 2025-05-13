@@ -8,16 +8,16 @@ Block Goose, powered by Large Language Models (LLMs), is a transformative tool f
 
 *   **Be Specific and Provide Context in Your Queries**:
     *   The quality of Goose's output (code, explanations, scripts) heavily depends on the quality of your input (queries).
-    *   Instead of a vague query like: `goose run --query "make a bot"`
-    *   Try a specific one: `goose run --query "Write a Python function for a Discord bot using the discord.py library. The function should be named 'parse_tip_command' and take a string argument 'message_content'. It needs to parse messages starting with '!tip @username <amount_sats> [optional_memo]' and return a dictionary with 'recipient', 'amount', and 'memo'. Ensure 'amount' is an integer."`
+    *   Instead of a vague query like: `Goose Task Example: make a bot`
+    *   Try a specific one: `Goose Task Example: Write a Python function for a Discord bot using the discord.py library. The function should be named 'parse_tip_command' and take a string argument 'message_content'. It needs to parse messages starting with '!tip @username <amount_sats> [optional_memo]' and return a dictionary with 'recipient', 'amount', and 'memo'. Ensure 'amount' is an integer.`
     *   The more details (language, libraries, function names, desired output, logic) you provide, the better and more relevant Goose's assistance will be.
 
 *   **Iterate and Refine**:
     *   Don't expect perfection on the first attempt. LLMs work best through iterative refinement.
     *   If the first output isn't exactly what you need, ask Goose for modifications:
-        *   `goose run --query "Refine the previous 'parse_tip_command' function to also handle amounts given in BTC and convert them to sats, assuming a fixed exchange rate of 1 BTC = 50,000,000 sats."`
-        *   `goose run --query "Can you make the error handling in that script more robust?"`
-        *   `goose run --query "Show me an alternative way to structure that class."`
+        *   `Goose Task Example: Refine the previous 'parse_tip_command' function to also handle amounts given in BTC and convert them to sats, assuming a fixed exchange rate of 1 BTC = 50,000,000 sats.`
+        *   `Goose Task Example: Can you make the error handling in that script more robust?`
+        *   `Goose Task Example: Show me an alternative way to structure that class.`
 
 *   **Break Down Complex Tasks**:
     *   For larger features, don't ask Goose to build the entire thing at once. Decompose the problem into smaller, manageable sub-tasks.
@@ -26,13 +26,13 @@ Block Goose, powered by Large Language Models (LLMs), is a transformative tool f
 
 *   **Specify Your Environment (Languages, Libraries, Frameworks)**:
     *   Always tell Goose which technologies you're using:
-        *   `goose run --query "Generate a JavaScript snippet to fetch data from an API using the 'axios' library."`
-        *   `goose run --query "Create a basic HTML structure for a webpage with a form containing two input fields and a submit button, styled with Bootstrap 5."`
+        *   `Goose Task Example: Generate a JavaScript snippet to fetch data from an API using the 'axios' library.`
+        *   `Goose Task Example: Create a basic HTML structure for a webpage with a form containing two input fields and a submit button, styled with Bootstrap 5.`
 
 *   **Ask for Explanations and Learning**:
     *   If Goose generates code or provides information you don't fully understand, ask for clarification:
-        *   `goose run --query "Explain the purpose of 'async/await' in the JavaScript code you just provided."`
-        *   `goose run --query "What are the security implications of the Flask route you suggested?"`
+        *   `Goose Task Example: Explain the purpose of 'async/await' in the JavaScript code you just provided.`
+        *   `Goose Task Example: What are the security implications of the Flask route you suggested?`
     *   Use Goose as a learning tool to deepen your understanding.
 
 *   **Critically Review and Test ALL Generated Output**:

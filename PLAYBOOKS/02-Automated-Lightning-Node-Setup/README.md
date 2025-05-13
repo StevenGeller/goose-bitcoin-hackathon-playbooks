@@ -43,13 +43,13 @@ This playbook outlines how to create a tool that automates the setup and configu
 
 ### Step 2: Scripting Installation (with Goose)
 
-*   **Goose Task**: `goose run --query "Generate a bash script to download, compile, and install LND on Ubuntu 22.04 from the official GitHub repository."`
+*   **Goose Task Example**: `Generate a bash script to download, compile, and install LND on Ubuntu 22.04 from the official GitHub repository.`
 *   Handle dependencies for the chosen node software.
 
 ### Step 3: Scripting Configuration (with Goose)
 
 *   Nodes require configuration files (e.g., `lnd.conf`, `bitcoin.conf` if running a Bitcoin node).
-*   **Goose Task**: `goose run --query "Create a Python script that generates a basic lnd.conf file. It should prompt the user for their desired alias, network (mainnet/testnet/simnet), and listen port, then write these to the file in the correct format."`
+*   **Goose Task Example**: `Create a Python script that generates a basic lnd.conf file. It should prompt the user for their desired alias, network (mainnet/testnet/simnet), and listen port, then write these to the file in the correct format.`
 *   Automate the setup of a Bitcoin backend if necessary (e.g., Neutrino for LND, or connecting to a bitcoind instance).
 
 ### Step 4: Scripting Initial Node Operations (with Goose)
@@ -63,7 +63,7 @@ This playbook outlines how to create a tool that automates the setup and configu
     *   Getting a new address to fund the node: `lncli newaddress p2wkh`
     *   Checking sync status: `lncli getinfo`
     *   Opening channels: `lncli openchannel --node_key <pubkey> --local_amt <amount>`
-*   **Goose Task**: `goose run --query "Write a bash script that uses lncli to: 1. Check if the wallet is unlocked. 2. If locked, prompt for password and unlock. 3. Get a new on-chain address. 4. Display the node's pubkey and current block height."`
+*   **Goose Task Example**: `Write a bash script that uses lncli to: 1. Check if the wallet is unlocked. 2. If locked, prompt for password and unlock. 3. Get a new on-chain address. 4. Display the node's pubkey and current block height.`
 
 ### Step 5: Integrating Alby for Testing
 

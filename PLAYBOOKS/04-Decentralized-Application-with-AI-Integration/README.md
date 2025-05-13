@@ -56,14 +56,14 @@ This playbook explores creating a decentralized application (dApp) where users c
     4.  User pays the invoice (using Alby wallet or any Lightning wallet).
     5.  dApp backend verifies payment with Alby.
     6.  AI service is performed, and content is delivered to the user.
-*   **Goose Task (Conceptual)**: `goose run --query "Outline the API endpoints needed for a backend that serves AI-generated article summaries, including endpoints for submitting text, getting a payment invoice, and retrieving the summary after payment."`
+*   **Goose Task Example (Conceptual)**: `Outline the API endpoints needed for a backend that serves AI-generated article summaries, including endpoints for submitting text, getting a payment invoice, and retrieving the summary after payment.`
 
 ### Step 3: Develop the AI Component (with Goose)
 
 *   If using an external API:
-    *   **Goose Task**: `goose run --query "Write a Python function using the requests library to call the OpenAI completion API with a given prompt and return the generated text. Include error handling."`
+    *   **Goose Task Example**: `Write a Python function using the requests library to call the OpenAI completion API with a given prompt and return the generated text. Include error handling.`
 *   If building a simple model:
-    *   **Goose Task**: `goose run --query "Write a Python script that uses the NLTK library to perform sentence tokenization and select the first 3 sentences as a simple summary of a given text."`
+    *   **Goose Task Example**: `Write a Python script that uses the NLTK library to perform sentence tokenization and select the first 3 sentences as a simple summary of a given text.`
 
 ### Step 4: Build the Backend Logic (with Goose)
 
@@ -72,14 +72,14 @@ This playbook explores creating a decentralized application (dApp) where users c
     *   To generate a Lightning invoice using Alby API (`albyClient.createInvoice()`).
     *   To check payment status of an invoice (`albyClient.getInvoiceStatus()` or via Webhooks - advanced).
     *   To trigger the AI service and return content post-payment.
-*   **Goose Task**: `goose run --query "Generate a basic Node.js Express backend with an endpoint '/request-summary' that takes text input, calls Alby's createInvoice API, and returns the invoice. Add another endpoint '/get-summary/:invoiceId' that checks invoice status and, if paid, returns a mock summary."`
+*   **Goose Task Example**: `Generate a basic Node.js Express backend with an endpoint '/request-summary' that takes text input, calls Alby's createInvoice API, and returns the invoice. Add another endpoint '/get-summary/:invoiceId' that checks invoice status and, if paid, returns a mock summary.`
 
 ### Step 5: Create the Frontend (with Goose)
 
 *   Interface for users to input data for the AI service.
 *   Display the Lightning invoice (QR code, copyable string).
 *   Mechanism to check for payment confirmation and display results.
-*   **Goose Task**: `goose run --query "Generate HTML and JavaScript for a simple webpage with a textarea for text input and a button. When the button is clicked, it should POST the text to a backend endpoint '/request-summary', receive a Lightning invoice, and display it as a QR code using a library like qrcode.js."`
+*   **Goose Task Example**: `Generate HTML and JavaScript for a simple webpage with a textarea for text input and a button. When the button is clicked, it should POST the text to a backend endpoint '/request-summary', receive a Lightning invoice, and display it as a QR code using a library like qrcode.js.`
 
 ### Step 6: Alby Integration for Payments
 

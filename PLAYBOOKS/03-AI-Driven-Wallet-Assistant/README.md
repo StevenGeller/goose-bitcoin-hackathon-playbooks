@@ -49,15 +49,15 @@ This playbook describes how to develop an AI-driven wallet assistant that helps 
     *   `"What is my balance?"`
     *   `"Generate an invoice for [amount] sats with memo [memo]"`
     *   `"Show my last 5 transactions."`
-*   **Goose Task (Conceptual)**: `goose run --query "Design a JSON structure to represent parsed user commands for a Bitcoin wallet assistant, including intent, amount, recipient, and memo fields."`
+*   **Goose Task Example (Conceptual)**: `Design a JSON structure to represent parsed user commands for a Bitcoin wallet assistant, including intent, amount, recipient, and memo fields.`
 
 ### Step 3: Building the NLU Component (with Goose)
 
 *   **Simple Approach (Regex)**: For a limited command set, regex can be effective.
-    *   **Goose Task**: `goose run --query "Write a Python function using regex to parse commands like 'send X sats to Y' and extract X (amount) and Y (recipient)."`
+    *   **Goose Task Example**: `Write a Python function using regex to parse commands like 'send X sats to Y' and extract X (amount) and Y (recipient).`
 *   **Advanced Approach (NLU Library - e.g., spaCy)**:
     *   Train a simple model or use rule-based matching for intent recognition and entity extraction.
-    *   **Goose Task**: `goose run --query "Show me a basic Python example using spaCy to identify entities like AMOUNT and RECIPIENT from a sentence like 'Please send 1000 satoshis to Bob via Lightning'."`
+    *   **Goose Task Example**: `Show me a basic Python example using spaCy to identify entities like AMOUNT and RECIPIENT from a sentence like 'Please send 1000 satoshis to Bob via Lightning'.`
 
 ### Step 4: Mapping Commands to Alby API Actions (with Goose)
 
@@ -66,18 +66,18 @@ This playbook describes how to develop an AI-driven wallet assistant that helps 
     *   `check_balance` intent -> `albyClient.getBalance()`
     *   `generate_invoice` intent -> `albyClient.createInvoice({ amount: ..., description: ... })`
     *   `list_transactions` intent -> `albyClient.getPayments({ limit: ..., offset: ..., direction: ...})` (or similar, check Alby API docs for exact methods)
-*   **Goose Task**: `goose run --query "Write a Python function that takes a parsed command object (intent, entities) and calls the appropriate Alby SDK function. For example, if intent is 'send_payment', it should call a mock send_payment function with entity details."`
+*   **Goose Task Example**: `Write a Python function that takes a parsed command object (intent, entities) and calls the appropriate Alby SDK function. For example, if intent is 'send_payment', it should call a mock send_payment function with entity details.`
 
 ### Step 5: Handling API Responses and User Feedback
 
 *   After calling an Alby API, process the response.
 *   Provide clear feedback to the user (success, failure, confirmation details).
-*   **Goose Task**: `goose run --query "Given a successful JSON response from Alby's sendPayment API, write a Python function to extract the payment hash and amount, and formulate a success message for the user."`
+*   **Goose Task Example**: `Given a successful JSON response from Alby's sendPayment API, write a Python function to extract the payment hash and amount, and formulate a success message for the user.`
 
 ### Step 6: User Interface
 
 *   **CLI**: Simplest to implement for a hackathon.
-    *   **Goose Task**: `goose run --query "Write a basic Python CLI application that takes user input, passes it to a mock NLU function, and prints the parsed command."`
+    *   **Goose Task Example**: `Write a basic Python CLI application that takes user input, passes it to a mock NLU function, and prints the parsed command.`
 *   **Chatbot**: Integrate with Discord, Slack, Telegram (more complex).
 *   **Web UI**: A simple HTML page with an input field (Goose can help generate basic HTML/JS).
 
