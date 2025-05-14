@@ -1,60 +1,50 @@
 # FewSats Setup Guide
 
-FewSats provides payment infrastructure tailored for AI agents, enabling secure transactions between AI systems. This guide helps you get started with FewSats if your hackathon project involves AI-to-AI payments.
+FewSats enables secure AI agent-to-AI agent payments. Use this guide if your project needs this.
 
 ## 1. Understanding FewSats
 
-*   **Purpose**: To allow AI agents to pay each other for services, data, or API calls without breaking their automated workflows.
-*   **Key Components**: Typically involves an API and/or CLI tools for integration.
+*   **Purpose**: Allows AI agents to pay each other for services/data/API calls.
+*   **Components**: Typically an API and/or CLI.
 
-## 2. Sign Up and Get API Credentials
+## 2. Sign Up & Get API Key
 
-1.  **Visit the FewSats Website**: Go to the official FewSats website (e.g., [fewsats.com](https://www.fewsats.com/) - verify the correct URL from the original context or a quick search).
-2.  **Create an Account**: Look for a "Sign Up," "Get Started," or "Developers" section to create a FewSats account.
-3.  **Obtain API Key**: Once registered and logged in, navigate to your account settings or developer dashboard to find or generate an API key.
-    *   This API key will be used to authenticate your requests when interacting with the FewSats service.
-    *   Secure your API key properly. Do not embed it directly in client-side code or public repositories.
+1.  **Visit FewSats Website**: Go to official FewSats site (e.g., [fewsats.com](https://www.fewsats.com/) - *verify official URL*).
+2.  **Create Account**: Sign up via "Sign Up," "Get Started," or "Developers" section.
+3.  **Obtain API Key**: Find/generate an API key in your account settings/developer dashboard.
+    *   **Secure your API key.** Do not embed in client-side code or public repos.
 
 ## 3. Integration Methods
 
-FewSats may offer a few ways to integrate its services:
+Always refer to official FewSats documentation for specifics.
 
-*   **FewSats CLI (Command Line Interface)**:
-    *   Check the FewSats documentation for instructions on how to install and configure their CLI.
-    *   The CLI can be useful for scripting interactions or managing your FewSats account and agent payment settings.
-    *   **Example (conceptual)**: `fewsats-cli agent create --name myAIAgent` or `fewsats-cli transaction send --from myAIAgent --to anotherAgent --amount 100`
-*   **FewSats API**: For deeper integration into your application code.
-    *   Consult the API documentation for endpoints related to:
-        *   Registering AI agents.
-        *   Initiating payments between agents.
-        *   Checking transaction statuses.
-        *   Managing agent balances or allowances.
-    *   You'll typically make HTTP requests to these endpoints, authenticating with your API key.
-*   **FewSats MCP Server (Multi-Currency Payments Server)**:
-    *   The original text mentioned "FewSats MCP server for secure AI payments." This suggests a specific component or architecture for handling these payments.
-    *   Refer to FewSats documentation ([docs.fewsats.com](https://docs.fewsats.com/) as inferred) for details on how to connect to and use the MCP server if it's relevant to your use case.
+*   **FewSats CLI**:
+    *   Install and configure per FewSats docs.
+    *   Useful for scripting or managing account/agent settings.
+    *   **Conceptual Example**: `fewsats-cli agent create --name myAIAgent`
+*   **FewSats API**: For deeper code integration.
+    *   Consult API docs for endpoints (agent registration, payments, status, balances).
+    *   Authenticate requests with your API key.
+*   **FewSats MCP Server (Multi-Currency Payments)**:
+    *   If relevant, refer to FewSats docs for connecting to/using the MCP server.
 
 ## 4. How Block Goose Can Help
 
-*   **Scripting CLI Interactions**: Goose can generate shell scripts to automate FewSats CLI commands.
-    *   `goose run --query "Write a bash script to use the (hypothetical) fewsats-cli to send 50 units from agentA to agentB."`
-*   **Generating API Client Code**: Goose can help create Python or JavaScript code to interact with the FewSats HTTP API.
-    *   `goose run --query "Write a Python function to make a POST request to 'https://api.fewsats.com/v1/payments' with a JSON body containing from_agent, to_agent, and amount, including an Authorization header for an API key."`
+*   **Script CLI**: Generate shell scripts for FewSats CLI.
+    *   `Goose Task Example: Bash script for fewsats-cli to send 50 units from agentA to agentB.`
+*   **Generate API Client Code**: Create Python/JS code for FewSats HTTP API.
+    *   `Goose Task Example: Python function for POST to 'https://api.fewsats.com/v1/payments' (JSON: from_agent, to_agent, amount) with Auth header for API key.` (Ensure API endpoint is correct from FewSats docs).
 
-## 5. Example Use Case in a Hackathon Project
+## 5. Example Hackathon Use Case
 
-Imagine a project with two AI agents:
-1.  **Agent A**: Analyzes user queries and determines what external data is needed.
-2.  **Agent B**: An AI agent that fetches specific data from a paid API (or performs a costly computation).
+*   **Agent A** (Query Analyzer) needs data from **Agent B** (Paid API Data Fetcher/Processor).
+*   Agent A pays Agent B via FewSats.
+*   Agent B, on payment confirmation, performs task and returns data to Agent A.
 
-*   Agent A decides it needs data from Agent B.
-*   Agent A uses FewSats to pay Agent B a small amount for the service.
-*   Upon payment confirmation via FewSats, Agent B performs its task and returns the data to Agent A.
+## 6. Key Setup Considerations
 
-## 6. Key Considerations
+*   **OFFICIAL DOCS ARE CRITICAL**: FewSats is specialized. **Rely on their latest official documentation.**
+*   **Security**: **Protect your FewSats API key.**
+*   **Hackathon Scope**: AI-to-AI payments can be complex. **Ensure it's core to your MVP or an optional extension.**
 
-*   **Documentation is Key**: FewSats is a specialized tool. Rely heavily on their official documentation for accurate setup, API endpoints, and usage guidelines.
-*   **Security**: Protect your FewSats API key.
-*   **Scope for Hackathon**: Integrating AI-to-AI payments can be complex. Ensure this feature is core to your project idea if you choose to implement it, or keep it as an optional extension.
-
-This setup guide provides a general outline. Always refer to the latest official FewSats documentation for the most precise and current information.
+Always use the latest official FewSats documentation for precise setup.
