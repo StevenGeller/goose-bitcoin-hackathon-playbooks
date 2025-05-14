@@ -97,4 +97,20 @@ This section provides an overview of the primary tools you'll be using for the G
     *   [Lexe Website](https://lexe.app/)
     *   [Lexe Public GitHub (Issue Tracking & Discussion)](https://github.com/lexe-app/lexe-public)
 
+
+## 7. nwc-enclaved wallet
+
+*   **What it is**: It's a custodial Lightning wallet service running in a trusted execution environment (TEE), offering convenience of managed wallets combined with privacy and security of self-custodial solutions.
+*   **Key Features**:
+    *   **Secure and private**: The service is open-source and running inside a TEE, providing privacy and security guarantees.
+    *   **Programmable wallet**: Create LN wallets with a couple lines of code for your app, your bots or your users.
+    *   **Nostr Integration**: Wallet provides LN address, supports Nostr zaps, can receive payments 24/7.
+*   **Why use it in a hackathon?**:
+    *   Potential solution if you need to create lots of LN wallets, need them to receive Nostr zaps and payments reliably, and are targeting small transaction amounts and balances. 
+*   **Word of caution**:
+    *   The service is in public testing phase, balances limited to 1000 sats per wallet, not ready for serious production applications yet. 
+*   **Learn More**:
+    *   [Source Code](https://github.com/nostrband/nwc-enclaved): Service description, including rationale, tradeoffs and benefits.
+    *   [Client Library](https://github.com/nostrband/nwc-enclaved-utils): JavaScript library to create wallets and LN addresses.
+
 By understanding these tools and their specific strengths, you can better architect your hackathon project and leverage their combined power to create something truly innovative!
