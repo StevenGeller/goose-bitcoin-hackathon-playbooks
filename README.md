@@ -1,6 +1,6 @@
 # Goose + Bitcoin Hackathon Playbooks 🚀
 
-Welcome to the official playbook repository for the Goose + Bitcoin Hackathon!
+Welcome to a playbook repository for the Goose + Bitcoin Hackathon!
 
 This collection supercharges your experience, guiding you to build innovative projects merging **Block Goose** (AI-driven automation) with Bitcoin and the Lightning Network, featuring tools like **Alby**, **LDK**, **Lightspark**, **FewSats**, and **Lexe**.
 
