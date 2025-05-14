@@ -40,6 +40,10 @@ This page provides links to valuable external resources, including official docu
 *   **[Lexe Website](https://lexe.app/)**: Official website for the Lexe self-custodial Bitcoin and Lightning wallet (iOS & Android).
 *   **[Lexe Public GitHub](https://github.com/lexe-app/lexe-public)**: For community discussions, feature requests, and issue tracking. Provides insight into features like Tor, LNURL, WebLN, and Nostr support.
 
+### Nwc-enclaved Wallets
+*   **[Source Code](https://github.com/nostrband/nwc-enclaved)**: Service description, including rationale, tradeoffs and benefits.
+*   **[Client Library](https://github.com/nostrband/nwc-enclaved-utils)**: JavaScript library to create wallets and LN addresses.
+
 ## Bitcoin & Lightning Network Development (General)
 
 *   **[Mastering Bitcoin by Andreas M. Antonopoulos](https://github.com/bitcoinbook/bitcoinbook)**: A comprehensive book on Bitcoin (Open Edition available on GitHub).
