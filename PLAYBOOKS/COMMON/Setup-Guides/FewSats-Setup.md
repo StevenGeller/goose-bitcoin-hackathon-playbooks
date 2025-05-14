@@ -40,6 +40,7 @@ Always refer to official FewSats documentation for specifics.
 *   **Agent A** (Query Analyzer) needs data from **Agent B** (Paid API Data Fetcher/Processor).
 *   Agent A pays Agent B via FewSats.
 *   Agent B, on payment confirmation, performs task and returns data to Agent A.
+*   **See Also**: The [FewSats Weather API demo](https://github.com/Fewsats/weather-api) for a concrete example of an AI agent paying for API access.
 
 ## 6. Key Setup Considerations
 

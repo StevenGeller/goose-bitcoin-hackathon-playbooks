@@ -1,6 +1,6 @@
-# Extending Your Project: Lightspark, FewSats, Lexe
+# Extending Your Project: Lightspark, FewSats, Lexe & More
 
-While Block Goose and Alby are core, these tools can add powerful capabilities. This guide briefly covers integrating Lightspark, FewSats, and Lexe.
+While Block Goose and Alby are core, these tools can add powerful capabilities. This guide briefly covers integrating Lightspark, FewSats, Lexe, and other notable services.
 
 ## 1. Lightspark: Enterprise-Grade Lightning
 
@@ -27,6 +27,7 @@ While Block Goose and Alby are core, these tools can add powerful capabilities. 
 *   **Integration**:
     *   **FewSats API/CLI**: Register agents, make payments, check status.
         *   ([FewSats Setup](./Setup-Guides/FewSats-Setup.md), [CLI GitHub](https://github.com/Fewsats/fewsatscli), [MCP Server GitHub](https://github.com/Fewsats/fewsats-mcp))
+        *   See the [FewSats Weather API demo](https://github.com/Fewsats/weather-api) for a concrete implementation example.
     *   **Goose**: Can script FewSats CLI or generate API call snippets for agent logic.
 *   **Scenario**: Research AI (A) pays Analysis AI (B) via FewSats for data processing.
 
@@ -37,16 +38,32 @@ While Block Goose and Alby are core, these tools can add powerful capabilities. 
     *   **User Wallet**: For participants testing send/receive with your app.
     *   **WebLN**: For browser-based Lightning interactions.
     *   **Nostr**: For Nostr-compatible interactions (zaps).
-    *   Demonstrating privacy-conscious wallet option.
 *   **Integration & Interaction**:
     *   **Primary**: User's personal wallet (QR codes, invoices, LNURL).
     *   **WebLN**: For web apps; Lexe can interact via NIP-07/companion extension.
         *   `Goose Task Example: Basic JavaScript to request WebLN payment if provider available.`
     *   **Nostr (NIP-07)**: Lexe as NIP-07 compatible extension.
-    *   **Note**: No general third-party backend API like Alby/Lightspark. Programmability via WebLN/LNURL.
+    *   **Lexe Sidecar SDK (Advanced)**: For headless interaction with a Lexe node. ([Lexe Sidecar SDK GitHub](https://github.com/lexe-app/lexe-sidecar-sdk/)) - Suitable for more complex projects needing direct Lexe node communication.
+    *   **Note**: Generally no third-party backend API like Alby/Lightspark. Programmability via WebLN/LNURL/Sidecar.
     *   **Goose**: Can help generate QR codes, WebLN snippets, explain LNURL flows.
 *   **Scenario**: Your dApp generates an invoice/LNURL; user pays with Lexe. Web dApp uses WebLN, Lexe fulfills.
 *   **Links**: ([Lexe Website](https://lexe.app/), [Lexe Public GitHub](https://github.com/lexe-app/lexe-public))
+
+## 4. Spark Wallet: User-Friendly Bitcoin/Lightning Wallet
+
+*   **Overview**: A Bitcoin and Lightning wallet known for ease of use.
+*   **Use Cases**:
+    *   Alternative user-facing wallet for testing transactions.
+    *   Good for participants seeking a clean mobile/desktop wallet.
+*   **Integration**: Primarily as an external wallet for users to interact with your app's invoices/LNURLs.
+*   **Links**: ([Spark Wallet Documentation](https://docs.spark.money/wallet/introduction))
+
+## 5. Other AI + Crypto Services
+
+*   **Inference Grid**:
+    *   **Overview**: Offers decentralized AI inference (e.g., for LLMs, image generation) paid with cryptocurrency.
+    *   **Use Cases**: Projects needing access to AI models without relying on centralized providers, with payments handled via crypto. Could be combined with AI agents that pay for inference using FewSats or Alby.
+    *   **Integration**: Via their specific API; check [Inference Grid Website](https://www.inferencegrid.ai/).
 
 ## Key Considerations When Extending
 

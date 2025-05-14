@@ -79,4 +79,16 @@ This guide introduces the primary tools for the Goose + Bitcoin Hackathon. Under
     *   [Lexe Website](https://lexe.app/)
     *   [Lexe Public GitHub](https://github.com/lexe-app/lexe-public)
 
+## 7. Spark Wallet
+
+*   **What it is**: A Bitcoin and Lightning wallet known for its ease of use and support for advanced features.
+*   **Key Features**:
+    *   User-friendly interface for managing Bitcoin and Lightning.
+    *   Often highlighted for its clear design and robust functionality.
+*   **Hackathon Edge**:
+    *   Good as a user-facing wallet for testing transactions.
+    *   Can be another option for participants looking for a solid mobile or desktop wallet experience.
+*   **Key Links**:
+    *   [Spark Wallet Documentation](https://docs.spark.money/wallet/introduction)
+
 Choose the right tools to innovate and build effectively during the hackathon!

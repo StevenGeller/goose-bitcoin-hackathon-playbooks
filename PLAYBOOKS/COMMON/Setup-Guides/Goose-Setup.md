@@ -57,4 +57,5 @@ For crucial tips on queries, iteration, task breakdown, and **critically reviewi
 
 For details, see official Block Goose documentation:
 *   [Block Goose Official Site](https://block.github.io/goose/)
+*   **[Goose Quickstart Guide](https://block.github.io/goose/docs/quickstart/)** (Highly Recommended)
 *   [Block Goose GitHub Repository](https://github.com/block/goose) (check `docs` or `README.md`)
