@@ -1,6 +1,6 @@
-# Extending Your Project: Lightspark, FewSats, Lexe & More
+# Extending Your Project: Lightspark, Fewsats, Lexe & More
 
-While Block Goose and Alby are core, these tools can add powerful capabilities. This guide briefly covers integrating Lightspark, FewSats, Lexe, and other notable services.
+While Block Goose and Alby are core, these tools can add powerful capabilities. This guide briefly covers integrating Lightspark, Fewsats, Lexe, and other notable services.
 
 ## 1. Lightspark: Enterprise-Grade Lightning
 
@@ -17,7 +17,7 @@ While Block Goose and Alby are core, these tools can add powerful capabilities. 
         *   `Goose Task Example: Python snippet for Lightspark SDK: send payment (invoice, API credentials).`
 *   **Scenario**: AI content platform with micropayments; Lightspark handles payment backend.
 
-## 2. FewSats: AI Agent Transactions
+## 2. Fewsats: AI Agent Transactions
 
 *   **Overview**: Payment infrastructure for secure AI agent-to-agent transactions.
 *   **Use Cases**:
@@ -25,11 +25,11 @@ While Block Goose and Alby are core, these tools can add powerful capabilities. 
     *   Micro-economies between AI components.
     *   AI autonomously paying for API calls/resources.
 *   **Integration**:
-    *   **FewSats API/CLI**: Register agents, make payments, check status.
-        *   ([FewSats Setup](./Setup-Guides/FewSats-Setup.md), [CLI GitHub](https://github.com/Fewsats/fewsatscli), [MCP Server GitHub](https://github.com/Fewsats/fewsats-mcp))
-        *   See the [FewSats Weather API demo](https://github.com/Fewsats/weather-api) for a concrete implementation example.
-    *   **Goose**: Can script FewSats CLI or generate API call snippets for agent logic.
-*   **Scenario**: Research AI (A) pays Analysis AI (B) via FewSats for data processing.
+    *   **Fewsats API/MCP**: Register agents, make payments, check status.
+        *   ([Fewsats Setup](./Setup-Guides/Fewsats-Setup.md), [MCP Server GitHub](https://github.com/Fewsats/fewsats-mcp))
+        *   See the [Fewsats Weather API demo](https://github.com/Fewsats/weather-api) for a concrete implementation example.
+    *   **Goose**: Can script Fewsats CLI or generate API call snippets for agent logic.
+*   **Scenario**: Research AI (A) pays Analysis AI (B) via Fewsats for data processing.
 
 ## 3. Lexe: User-Focused Self-Custodial Wallet
 
@@ -62,7 +62,7 @@ While Block Goose and Alby are core, these tools can add powerful capabilities. 
 
 *   **Inference Grid**:
     *   **Overview**: Offers decentralized AI inference (e.g., for LLMs, image generation) paid with cryptocurrency.
-    *   **Use Cases**: Projects needing access to AI models without relying on centralized providers, with payments handled via crypto. Could be combined with AI agents that pay for inference using FewSats or Alby.
+    *   **Use Cases**: Projects needing access to AI models without relying on centralized providers, with payments handled via crypto. Could be combined with AI agents that pay for inference using Fewsats or Alby.
     *   **Integration**: Via their specific API; check [Inference Grid Website](https://www.inferencegrid.ai/).
 
 ## Key Considerations When Extending

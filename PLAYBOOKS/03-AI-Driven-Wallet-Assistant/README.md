@@ -75,7 +75,7 @@ Create an assistant (chatbot, voice app, CLI) that lets users interact with thei
 
 ## 4. Advanced Extensions
 
-*   **Agent Payments (FewSats)**: If assistant pays for services (premium NLU). ([FewSats Setup](../COMMON/Setup-Guides/FewSats-Setup.md))
+*   **Agent Payments (Fewsats)**: If assistant pays for services (premium NLU). ([Fewsats Setup](../COMMON/Setup-Guides/Fewsats-Setup.md))
 *   **Test Wallet (Lexe)**: Use Lexe for user-side testing. ([Extending with Other Tools](../COMMON/Extending-with-Other-Tools.md))
 *   **Contact Book**: Alias recipients (e.g., "Alice" -> LN Address).
 *   **Recurring Payments**: `"Send 100 sats to Bob weekly."`

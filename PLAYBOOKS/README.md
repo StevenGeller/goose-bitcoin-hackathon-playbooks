@@ -5,7 +5,7 @@ Welcome to the Goose + Bitcoin Hackathon Playbooks! These guides are designed to
 ## Main Playbooks
 
 *   **[00 - Introduction to Tools](./00-Introduction-to-Tools/README.md)**
-    *   **Goal**: Get familiar with the primary tools (Goose, Alby, LDK, Lightspark, FewSats, Lexe) and their key capabilities for the hackathon.
+    *   **Goal**: Get familiar with the primary tools (Goose, Alby, LDK, Lightspark, Fewsats, Lexe) and their key capabilities for the hackathon.
     *   **Use If**: You're new to these tools or want a refresher on what they offer.
 
 *   **[01 - AI-Powered Bitcoin Tip Bot](./01-AI-Powered-Bitcoin-Tip-Bot/README.md)**
@@ -23,8 +23,8 @@ Welcome to the Goose + Bitcoin Hackathon Playbooks! These guides are designed to
 ## Common Resources
 
 *   **[COMMON/Best-Practices.md](./COMMON/Best-Practices.md)**: Essential tips for effective Goose/LLM usage, security, UX, code quality, and hackathon success. **Highly recommended read for all participants.**
-*   **[COMMON/Setup-Guides/](./COMMON/Setup-Guides/)**: Step-by-step instructions for setting up Alby, Goose, FewSats, and a general overview of Lightning node options.
-*   **[COMMON/Extending-with-Other-Tools.md](./COMMON/Extending-with-Other-Tools.md)**: Guidance on how Lightspark, FewSats, and Lexe can complement your projects.
+*   **[COMMON/Setup-Guides/](./COMMON/Setup-Guides/)**: Step-by-step instructions for setting up Alby, Goose, Fewsats, and a general overview of Lightning node options.
+*   **[COMMON/Extending-with-Other-Tools.md](./COMMON/Extending-with-Other-Tools.md)**: Guidance on how Lightspark, Fewsats, and Lexe can complement your projects.
 *   **[COMMON/Hackathon-Workflow-Example.md](./COMMON/Hackathon-Workflow-Example.md)**: A sample timeline for tackling a project like the AI Tip Bot.
 
 ---

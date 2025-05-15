@@ -68,7 +68,7 @@ A minimal JavaScript example for command parsing and Alby API interaction is in 
 
 ## 5. Extensions & Advanced Ideas
 
-*   **Multi-AI Payments**: Use FewSats for transactions between AI components. ([FewSats Setup](../COMMON/Setup-Guides/FewSats-Setup.md))
+*   **Multi-AI Payments**: Use Fewsats for transactions between AI components. ([Fewsats Setup](../COMMON/Setup-Guides/Fewsats-Setup.md))
 *   **Scalable Infrastructure**: For high volume, consider Lightspark. ([Extending with Other Tools](../COMMON/Extending-with-Other-Tools.md))
 *   **Database**: Store user preferences, LN addresses, or history.
 *   **Enhanced Commands**: Tip in different currencies (use Goose for conversion), scheduled/multi-user tips.
