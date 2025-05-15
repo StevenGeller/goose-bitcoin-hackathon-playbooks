@@ -1,73 +1,68 @@
 # Alby Setup Guide
 
-This guide will help you set up Alby, a Bitcoin and Nostr companion that provides a browser extension wallet and a powerful API for integrating Bitcoin Lightning payments into your applications.
+Alby provides several tools and services. Most notably: 
 
-## 1. Create an Alby Account & Wallet
++ [Alby Hub](https://albyhub.com/) - the easy self-custodial, Bitcoin lightning wallet that connects to apps. The wallet for humans and computers.
++ [Alby Browser Extension](https://getalby.com/products/browser-extension) - One click Bitcoin and Nostr for web apps in your browser
++ [Alby Account](https://getalby.com/auth/users/new) 
 
-If you don't already have an Alby account and wallet, follow these steps:
 
-1.  **Visit the Alby Website**: Go to [getalby.com](https://getalby.com/).
-2.  **Sign Up/Install Extension**: You can typically sign up by installing the Alby browser extension.
-    *   Click on "Add to Chrome" (or your respective browser like Firefox, Edge, Brave).
-    *   Follow the prompts in the browser extension store to add Alby.
-3.  **Create Your Wallet**: Once the extension is installed, open it and follow the instructions to create a new Alby account and Lightning wallet. This will involve setting a password and securely backing up your recovery phrase (seed phrase). **Store your recovery phrase safely!**
+## 1. Create Alby Account & Setup Alby Hub 
 
-Your Alby browser extension wallet is now ready for sending and receiving Bitcoin Lightning payments.
+1. **Visit [getalby.com](https://getalby.com/).** and create an account.
+2. **Follow the wizzard to setup [Alby Hub](https://albyhub.com/)** - your self-custodial wallet. Either run it in the Cloud or on your own (home) server. Find more details in the [getting started guide](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/alby-hub/getting-started) (note: you can also run the Alby Hub without account)
+3. For use in the browser **Install the Alby Browser Extension**: Click "Add to Chrome" (or your browser). Follow prompts.
 
-## 2. Get Alby API Credentials (for Developers)
+**Always backup your recovery phrase**
 
-To use Alby's Wallet API in your hackathon project, you need API credentials (Client ID and Client Secret).
 
-1.  **Go to the Alby Developer Portal**: Navigate to [developers.getalby.com](https://developers.getalby.com/).
-2.  **Sign In**: Sign in with your Alby account (the one you created with the browser extension).
-3.  **Create an OAuth App / API Key**:
-    *   Look for a section like "Your Apps," "API Keys," or "OAuth Clients."
-    *   You'll need to create a new OAuth application or directly obtain API credentials.
-    *   Provide a name for your application (e.g., "Hackathon Tip Bot").
-    *   You might need to specify scopes or permissions for your API key. For sending payments and managing invoices, you'll generally need relevant permissions.
-4.  **Copy Your Credentials**: Once the application is created, Alby will provide you with a:
-    *   `Client ID`
-    *   `Client Secret`
+## 2. Fund Your Alby Wallet
 
-    **Important**: Treat your `Client Secret` like a password. Do not expose it in client-side code or public repositories. Store it securely, for example, using environment variables on your server.
+To test sending payments.
 
-## 3. Using Alby's Wallet API
+1.  Make sure your Alby Hub has a [channel with incoming liquidity](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/alby-hub/wallet/open-your-first-channel)
+3.  In the "Wallet" find "Receive" 
+4.  Send Bitcoin to the address/invoice from another wallet/exchange. 
 
-Alby provides several ways to interact with its API:
 
-*   **Alby JS SDK**: If you're working with JavaScript/Node.js, the `alby-js-sdk` is a convenient way to integrate.
+## 3. Create a new app connection in Alby Hub
+
+1.  **Go to "Connections in your Alby Hub**.
+2.  **"Add Connection"** and choose a name and define the permissions. ([learn more](https://guides.getalby.com/user-guide/alby-account-and-browser-extension/alby-hub/app-connections#how-to-connect-apps))
+   + You can create app connections with only read-only permissions to receive payments.
+   + For connections with sending permission set a budget.
+   + Permissions can be changed later.
+4.  **Copy the connection secret** for use in your application.
+
+
+## 4. Using Alby's SDK with NWC
+
+*   **Alby JS SDK** :
     ```bash
-    npm install alby-js-sdk
+    npm install @getalby/sdk
     ```
-    Then initialize it in your code:
+    Quick Start:
     ```javascript
-    const alby = require('alby-js-sdk');
-    const albyClient = new alby.AlbyClient({
-      clientId: 'YOUR_CLIENT_ID',
-      clientSecret: 'YOUR_CLIENT_SECRET',
-    });
+    import { LN, USD } from "@getalby/sdk";
+
+    const credentials = "nostr+walletconnect://..."; // the NWC connection credentials
+
+    // Send payments:
+    await new LN(credentials).pay("lnbc..."); // pay a lightning invoice
+    await new LN(credentials).pay("hello@getalby.com", USD(1)); // or pay $1 USD to a lightning address
+
+    // Receive payments:
+    const request = await new LN(credentials).requestPayment(USD(1.0));
+    // give request.invoice to someone...
+    request.onPaid(() => { alert("Thanks") });
     ```
-*   **Direct API Calls**: You can make HTTP requests directly to Alby's API endpoints. Refer to the [Alby API Documentation](https://developers.getalby.com/api-references) for endpoint details, authentication methods (usually OAuth 2.0 Bearer Tokens obtained using your Client ID and Secret), and request/response formats.
-*   **Postman Workspace**: Alby provides a Postman workspace for easy testing of their API endpoints: [Alby Postman Collection](https://www.postman.com/alby/workspace/alby-s-public-workspace/overview).
+    
+*   **More examples**: [https://github.com/getAlby/js-sdk/tree/master/examples/nwc](https://github.com/getAlby/js-sdk/tree/master/examples/nwc)
 
-## 4. Example Tasks with Alby API
 
-*   **Sending Payments**: `albyClient.sendPayment({ invoice: 'lnbc...' })`
-*   **Creating Invoices**: `albyClient.createInvoice({ amount: 1000, description: 'My Product' })` (amount in millisatoshis if not specified, check docs)
-*   **Getting Balance**: `albyClient.getBalance()`
-*   **Getting Transaction History**: `albyClient.getPayments(...)` (check API docs for parameters)
+## 6. Key Setup Considerations
 
-## 5. Funding Your Alby Wallet
+*   **Security**: **Backup and Protect your recovery phrase and password**
+*   **Network**: mainnet is best for interoperability, prefer small amounts. 
 
-To test sending payments from your Alby wallet (via API or extension), you'll need to fund it with some Bitcoin (preferably on testnet/simnet for development if available, or small amounts on mainnet).
-*   Open your Alby browser extension.
-*   Find the "Receive" or "Add Funds" option.
-*   Send Bitcoin to the provided address or Lightning invoice from another wallet or an exchange.
-
-## 6. Key Considerations
-
-*   **Security**: Always protect your `Client Secret` and your wallet's recovery phrase.
-*   **API Rate Limits**: Be mindful of API rate limits, especially during intensive testing.
-*   **Mainnet vs. Testnet**: For development and hackathons, using testnet Bitcoin (if Alby provides easy testnet support through their API) or very small mainnet amounts is advisable to avoid risking significant funds.
-
-By following these steps, you'll be ready to integrate Alby's powerful Lightning payment capabilities into your hackathon project!
+You're ready to integrate Alby Lightning payments!

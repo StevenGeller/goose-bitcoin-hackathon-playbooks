@@ -1,69 +1,75 @@
-# Extending with Other Tools
+# Extending Your Project: Lightspark, FewSats, Lexe & More
 
-While Block Goose and Alby form the core of many project ideas in these playbooks, several other tools can extend the capabilities of your hackathon project. This guide provides a brief overview of how Lightspark, FewSats, and Lexe can be integrated.
+While Block Goose and Alby are core, these tools can add powerful capabilities. This guide briefly covers integrating Lightspark, FewSats, Lexe, and other notable services.
 
-## 1. Lightspark
+## 1. Lightspark: Enterprise-Grade Lightning
 
-*   **What it is**: Lightspark provides an enterprise-grade platform for Lightning Network integration, offering managed node services, SDKs in multiple languages, and tools like "Spark" for easy interaction.
-*   **When to Use**: Consider Lightspark if your project:
-    *   Requires handling a high volume of Lightning transactions reliably.
-    *   Needs an enterprise-grade, scalable backend for payments.
-    *   Wants to abstract away the complexities of running and managing Lightning nodes and liquidity.
-    *   Could benefit from AI-powered routing optimization (e.g., Lightspark Predict).
-    *   Is building a marketplace dApp, a high-traffic service, or any application where payment reliability is paramount.
-*   **How to Integrate**:
-    *   **SDKs**: Lightspark offers comprehensive SDKs for various programming languages (Python, JavaScript, Java, Kotlin, Swift, Go, Rust). These are the primary way to integrate Lightspark into your application backend.
-        *   Start with the [Lightspark SDK Quickstart](https://docs.lightspark.com/lightspark-sdk/quickstart).
-    *   **Spark CLI**: The `spark` command-line tool allows you to manage your Lightspark account, nodes, and perform operations like sending/receiving payments. Useful for testing, scripting, or administrative tasks.
-    *   **APIs**: Underlying the SDKs are robust APIs, which you can also interact with directly if needed.
-    *   **Block Goose Role**: Goose can help generate client code for Lightspark SDKs/APIs in your chosen language or assist in scripting `spark` CLI commands.
-        *   Example: `Goose Task Example: Show me a Python snippet to send a payment using the Lightspark SDK, given an invoice and API credentials.`
-*   **Example Scenario**: An AI-driven content platform where users pay micropayments for articles or features. Lightspark can provide a scalable and reliable backend to handle numerous small payments without requiring you to manage individual Lightning channels or liquidity.
+*   **Overview**: Managed Lightning nodes, SDKs (Python, JS, etc.), "Spark" CLI, AI-powered routing.
+*   **Use Cases**:
+    *   High-volume/reliability Lightning transactions.
+    *   Abstracting node/liquidity management.
+    *   Marketplaces, high-traffic services.
+*   **Integration**:
+    *   **SDKs**: Primary method. ([Lightspark SDK Quickstart](https://docs.lightspark.com/lightspark-sdk/quickstart))
+    *   **Spark CLI**: Testing, scripting, admin.
+    *   **APIs**: Direct interaction if needed.
+    *   **Goose**: Can generate client code for SDKs/APIs or script `spark` CLI.
+        *   `Goose Task Example: Python snippet for Lightspark SDK: send payment (invoice, API credentials).`
+*   **Scenario**: AI content platform with micropayments; Lightspark handles payment backend.
 
-## 2. FewSats
+## 2. FewSats: AI Agent Transactions
 
-*   **What it is**: Payment infrastructure designed for AI agents to transact securely with each other.
-*   **When to Use**: Ideal for projects where:
-    *   Multiple AI agents need to exchange value or pay for services/data from each other.
-    *   You want to enable a micro-economy between different AI components of your system.
-    *   An AI agent needs to autonomously pay for API calls or resources to complete its task.
-*   **How to Integrate**:
-    *   **FewSats API/CLI**: Use the FewSats CLI or API to register agents, initiate payments between them, and check balances/statuses.
-        *   Refer to [FewSats Setup Guide](./Setup-Guides/FewSats-Setup.md) for initial setup.
-        *   [FewSats CLI GitHub](https://github.com/Fewsats/fewsatscli)
-        *   [FewSats MCP Server GitHub](https://github.com/Fewsats/fewsats-mcp) (for Multi-Currency Payments)
-    *   **Block Goose Role**: Goose can write scripts for the FewSats CLI or generate code snippets to call the FewSats API from your AI agent's logic.
-*   **Example Scenario**: A research AI (Agent A) needs specific data processed by a specialized analysis AI (Agent B). Agent A uses FewSats to pay Agent B for the analysis service. The payment and data exchange are automated.
+*   **Overview**: Payment infrastructure for secure AI agent-to-agent transactions.
+*   **Use Cases**:
+    *   Multiple AI agents exchanging value/paying for services.
+    *   Micro-economies between AI components.
+    *   AI autonomously paying for API calls/resources.
+*   **Integration**:
+    *   **FewSats API/CLI**: Register agents, make payments, check status.
+        *   ([FewSats Setup](./Setup-Guides/FewSats-Setup.md), [CLI GitHub](https://github.com/Fewsats/fewsatscli), [MCP Server GitHub](https://github.com/Fewsats/fewsats-mcp))
+        *   See the [FewSats Weather API demo](https://github.com/Fewsats/weather-api) for a concrete implementation example.
+    *   **Goose**: Can script FewSats CLI or generate API call snippets for agent logic.
+*   **Scenario**: Research AI (A) pays Analysis AI (B) via FewSats for data processing.
 
-## 3. Lexe
+## 3. Lexe: User-Focused Self-Custodial Wallet
 
-*   **What it is**: Lexe is a feature-rich, self-custodial Bitcoin and Lightning wallet for iOS and Android, with a focus on user sovereignty and privacy. It supports LNURL, WebLN, Nostr, and Tor.
-*   **When to Use**:
-    *   Excellent as a **user-facing wallet** for participants to test sending/receiving payments to/from your hackathon application.
-    *   Useful for projects that want to leverage **WebLN** for browser-based Lightning interactions, as Lexe supports this standard.
-    *   If your project interacts with **Nostr** (e.g., zaps), Lexe can be a compatible wallet.
-    *   For demonstrating a **privacy-conscious wallet option** to users.
-*   **How to Integrate & Interact**:
-    *   **Primary Interaction**: As a user's wallet. Users can scan QR codes, paste invoices generated by your app, or use LNURL links.
-    *   **WebLN**: If your application is web-based, you can integrate WebLN features. Lexe (when installed as a mobile app, often alongside a companion browser extension or via its NIP-07 capabilities) can interact with WebLN-enabled sites.
-        *   **Goose Task Example**: `Show me a basic JavaScript snippet to request a payment using WebLN if a provider is available.`
-    *   **Nostr (NIP-07)**: For browser-based Nostr interactions, Lexe can act as a NIP-07 compatible extension.
-    *   **No General Third-Party API**: Lexe does not offer a general server-side API for developers to integrate into the backend of *other* applications in the same way Alby or Lightspark do. Its programmability comes from standards like WebLN and LNURL.
-    *   **Self-Hosted Lexe Server**: Advanced users can run their own Lexe server for full control, but this is likely outside the scope of typical hackathon integrations unless the project is specifically about this.
-*   **Block Goose Role**:
-    *   Can help generate QR codes for invoices.
-    *   Can provide code snippets for implementing WebLN requests in your frontend JavaScript.
-    *   Can assist in understanding LNURL flows if your app needs to generate LNURL-based interactions.
-*   **Example Scenario**: Your dApp generates a Lightning invoice or an LNURL link. A user with Lexe on their phone can easily pay it. If your dApp is a web page using WebLN, Lexe could potentially fulfill the payment request directly through browser interaction.
-*   **Learn More**:
-    *   [Lexe Website](https://lexe.app/)
-    *   [Lexe Public GitHub](https://github.com/lexe-app/lexe-public)
+*   **Overview**: iOS/Android self-custodial Bitcoin/Lightning wallet. Supports LNURL, WebLN, Nostr, Tor.
+*   **Use Cases**:
+    *   **User Wallet**: For participants testing send/receive with your app.
+    *   **WebLN**: For browser-based Lightning interactions.
+    *   **Nostr**: For Nostr-compatible interactions (zaps).
+*   **Integration & Interaction**:
+    *   **Primary**: User's personal wallet (QR codes, invoices, LNURL).
+    *   **WebLN**: For web apps; Lexe can interact via NIP-07/companion extension.
+        *   `Goose Task Example: Basic JavaScript to request WebLN payment if provider available.`
+    *   **Nostr (NIP-07)**: Lexe as NIP-07 compatible extension.
+    *   **Lexe Sidecar SDK (Advanced)**: For headless interaction with a Lexe node. ([Lexe Sidecar SDK GitHub](https://github.com/lexe-app/lexe-sidecar-sdk/)) - Suitable for more complex projects needing direct Lexe node communication.
+    *   **Note**: Generally no third-party backend API like Alby/Lightspark. Programmability via WebLN/LNURL/Sidecar.
+    *   **Goose**: Can help generate QR codes, WebLN snippets, explain LNURL flows.
+*   **Scenario**: Your dApp generates an invoice/LNURL; user pays with Lexe. Web dApp uses WebLN, Lexe fulfills.
+*   **Links**: ([Lexe Website](https://lexe.app/), [Lexe Public GitHub](https://github.com/lexe-app/lexe-public))
 
-## General Considerations for Extending
+## 4. Spark Wallet: User-Friendly Bitcoin/Lightning Wallet
 
-*   **Complexity**: Adding more tools increases the complexity of your project. For a hackathon, focus on a core set of tools that directly contribute to your MVP.
-*   **Hackathon Goals**: Align tool choices with the hackathon's theme and judging criteria.
-*   **Documentation**: Always refer to the official documentation of these tools for the most accurate and up-to-date integration methods.
-*   **Goose as an Enabler**: Remember Block Goose can assist in learning and integrating these tools by generating boilerplate code, explaining API usage, or scripting command-line interactions.
+*   **Overview**: A Bitcoin and Lightning wallet known for ease of use.
+*   **Use Cases**:
+    *   Alternative user-facing wallet for testing transactions.
+    *   Good for participants seeking a clean mobile/desktop wallet.
+*   **Integration**: Primarily as an external wallet for users to interact with your app's invoices/LNURLs.
+*   **Links**: ([Spark Wallet Documentation](https://docs.spark.money/wallet/introduction))
 
-Choose additional tools wisely to enhance your project without overcomplicating it within the hackathon timeframe.
+## 5. Other AI + Crypto Services
+
+*   **Inference Grid**:
+    *   **Overview**: Offers decentralized AI inference (e.g., for LLMs, image generation) paid with cryptocurrency.
+    *   **Use Cases**: Projects needing access to AI models without relying on centralized providers, with payments handled via crypto. Could be combined with AI agents that pay for inference using FewSats or Alby.
+    *   **Integration**: Via their specific API; check [Inference Grid Website](https://www.inferencegrid.ai/).
+
+## Key Considerations When Extending
+
+*   **Complexity**: More tools = more complexity. **Focus on MVP for hackathons.**
+*   **Hackathon Goals**: **Align tool choices** with theme/judging criteria.
+*   **Official Docs**: **Always refer to official tool documentation** for up-to-date methods.
+*   **Goose as Enabler**: **Use Goose to learn and integrate** (boilerplate, API usage, scripting).
+
+Choose additional tools wisely to enhance, not overcomplicate, your hackathon project.
