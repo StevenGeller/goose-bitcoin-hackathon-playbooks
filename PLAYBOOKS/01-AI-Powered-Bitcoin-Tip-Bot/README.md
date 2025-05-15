@@ -12,7 +12,7 @@ Create a bot that parses tipping commands (e.g., `!tip @user 1000 sats`) on plat
     *   Payment Processor (Alby)
     *   AI Automation (Block Goose)
 *   **Why Build This?**
-    *   Explore AI + Crypto.
+    *   Explore AI + Bitcoin.
     *   Demonstrate practical micropayments.
     *   Engaging project with scalable complexity.
 
