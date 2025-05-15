@@ -54,6 +54,10 @@ This page provides links to valuable external resources, including official docu
 ### Inference Grid
 *   **[Inference Grid Website](https://www.inferencegrid.ai/)**: Decentralized AI inference paid with cryptocurrency.
 
+### Nwc-enclaved Wallets
+*   **[Source Code](https://github.com/nostrband/nwc-enclaved)**: Source code and documentation for the NWC enclaved wallet service, covering its architecture, rationale, tradeoffs, and benefits.
+*   **[Client Library](https://github.com/nostrband/nwc-enclaved-utils)**: JavaScript library to create wallets and LN addresses.
+
 ## Bitcoin & Lightning Network Development (General)
 
 *   **[Mastering Bitcoin by Andreas M. Antonopoulos](https://github.com/bitcoinbook/bitcoinbook)**: A comprehensive book on Bitcoin (Open Edition available on GitHub).
