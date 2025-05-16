@@ -66,3 +66,20 @@ To test sending payments.
 *   **Network**: mainnet is best for interoperability, prefer small amounts. 
 
 You're ready to integrate Alby Lightning payments!
+
+
+## 7. Connect your Alby Hub to Goose
+
+Connect your Alby Hub to Goose with the [NWC MCP Server](https://github.com/getAlby/nwc-mcp-server/?tab=readme-ov-file#add-to-goose) to interact with your wallet through natural language.
+
+1.  Type `goose configure`
+2.  Add extension -> Command Line Extension
+3.  Call it `nwc`
+4.  What command should be run: `npx -y @getalby/nwc-mcp-server`
+5.  Timeout: 30
+6.  Description: no
+7.  environment variables: yes
+8.  environment variable name: `NWC_CONNECTION_STRING`
+9.  environment variable value: `nostr+walletconnect://...` (your NWC connection secret here)
+
+
