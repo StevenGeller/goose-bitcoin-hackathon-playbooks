@@ -55,15 +55,30 @@ While Block Goose and Alby are core, these tools can add powerful capabilities. 
 *   **Use Cases**:
     *   Alternative user-facing wallet for testing transactions.
     *   Good for participants seeking a clean mobile/desktop wallet.
+    *   Deploy self-custodial Bitcoin wallets in a scalable and developer-friendly way.
 *   **Integration**: Primarily as an external wallet for users to interact with your app's invoices/LNURLs.
 *   **Links**: ([Spark Wallet Documentation](https://docs.spark.money/wallet/introduction))
 
-## 5. Other AI + Crypto Services
+## 5. OpenSecret Cloud / Maple
+
+*   **Overview**: A secure cloud platform for Bitcoin and Lightning applications, with Maple being a key component.
+*   **Use Cases**:
+    *   Applications requiring secure storage of Bitcoin/Lightning data.
+    *   Projects needing encrypted data storage with Bitcoin-based authentication.
+    *   Solutions that benefit from Bitcoin-native application architecture.
+*   **Integration**:
+    *   **APIs**: Access through their documented APIs.
+    *   **Maple**: Leverage the Maple framework for Bitcoin-native applications.
+    *   **Goose**: Can help generate code snippets for API integration.
+*   **Links**: ([OpenSecret Cloud Documentation](https://docs.opensecret.cloud/), [Maple GitHub Repository](https://github.com/OpenSecretCloud/Maple))
+
+## 6. AI + Crypto Services
 
 *   **Inference Grid**:
-    *   **Overview**: Offers decentralized AI inference (e.g., for LLMs, image generation) paid with cryptocurrency.
-    *   **Use Cases**: Projects needing access to AI models without relying on centralized providers, with payments handled via crypto. Could be combined with AI agents that pay for inference using Fewsats or Alby.
-    *   **Integration**: Via their specific API; check [Inference Grid Website](https://www.inferencegrid.ai/).
+    *   **Overview**: Offers Lightning micropayment-based access to LLMs for building Bitcoin-native AI workflows.
+    *   **Use Cases**: Projects needing access to AI models with Bitcoin-native payment integration, perfect for creating AI applications with pay-per-use pricing models.
+    *   **Integration**: Via their API; check [Inference Grid Website](https://www.inferencegrid.ai/).
+    *   **Scenario**: Create an application that uses AI capabilities while paying for inference with Lightning micropayments, allowing for precise usage-based billing.
 
 ## Key Considerations When Extending
 

@@ -1,11 +1,11 @@
 # Bitcoin Hackathon Playbooks
 
-Welcome to the Goose + Bitcoin Hackathon Playbooks! These guides are designed to help you leverage powerful tools like Block Goose (AI Agent), Alby (Bitcoin/Lightning Wallet & API), LDK (Lightning Dev Kit), and more to build innovative projects.
+Welcome to the Goose + Bitcoin Hackathon Playbooks! These guides are designed to help you leverage powerful tools like Block Goose (AI Agent), Alby (Bitcoin/Lightning Wallet & API), LDK (Lightning Dev Kit), Lightspark, Fewsats, Lexe, Spark Wallet, OpenSecret Cloud/Maple, and Inference Grid to build innovative projects.
 
 ## Main Playbooks
 
 *   **[00 - Introduction to Tools](./00-Introduction-to-Tools/README.md)**
-    *   **Goal**: Get familiar with the primary tools (Goose, Alby, LDK, Lightspark, Fewsats, Lexe) and their key capabilities for the hackathon.
+    *   **Goal**: Get familiar with the primary tools (Goose, Alby, LDK, Lightspark, Fewsats, Lexe, Spark Wallet, OpenSecret Cloud/Maple, Inference Grid) and their key capabilities for the hackathon.
     *   **Use If**: You're new to these tools or want a refresher on what they offer.
 
 *   **[01 - AI-Powered Bitcoin Tip Bot](./01-AI-Powered-Bitcoin-Tip-Bot/README.md)**
@@ -24,8 +24,15 @@ Welcome to the Goose + Bitcoin Hackathon Playbooks! These guides are designed to
 
 *   **[COMMON/Best-Practices.md](./COMMON/Best-Practices.md)**: Essential tips for effective Goose/LLM usage, security, UX, code quality, and hackathon success. **Highly recommended read for all participants.**
 *   **[COMMON/Setup-Guides/](./COMMON/Setup-Guides/)**: Step-by-step instructions for setting up Alby, Goose, Fewsats, and a general overview of Lightning node options.
-*   **[COMMON/Extending-with-Other-Tools.md](./COMMON/Extending-with-Other-Tools.md)**: Guidance on how Lightspark, Fewsats, and Lexe can complement your projects.
+*   **[COMMON/Extending-with-Other-Tools.md](./COMMON/Extending-with-Other-Tools.md)**: Guidance on how Lightspark, Fewsats, Lexe, Spark Wallet, OpenSecret Cloud/Maple, Inference Grid, and other tools can complement your projects.
 *   **[COMMON/Hackathon-Workflow-Example.md](./COMMON/Hackathon-Workflow-Example.md)**: A sample timeline for tackling a project like the AI Tip Bot.
+
+## Additional Tools & Resources
+
+*   **[Lexe Sidecar SDK](https://github.com/lexe-app/lexe-sidecar-sdk)**: SDK for headless interaction with a Lexe node, ideal for building Bitcoin/Lightning applications.
+*   **[OpenSecret Cloud/Maple](https://github.com/OpenSecretCloud/Maple)**: A secure cloud platform for Bitcoin applications with comprehensive documentation at [docs.opensecret.cloud](https://docs.opensecret.cloud/).
+*   **[Spark Wallet SDK](https://docs.spark.money/wallet/introduction)**: Deploy self-custodial Bitcoin wallets in a scalable and developer-friendly way.
+*   **[Inference Grid](https://www.inferencegrid.ai/)**: Lightning micropayment-based access to LLMs for building Bitcoin-native AI workflows.
 
 ---
 

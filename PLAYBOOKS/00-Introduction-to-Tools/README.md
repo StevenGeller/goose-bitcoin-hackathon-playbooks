@@ -62,7 +62,7 @@ This guide introduces the primary tools for the Goose + Bitcoin Hackathon. Under
 *   **Key Links**:
     *   [Fewsats Website](https://www.fewsats.com/)
     *   [Fewsats Documentation](https://fewsats.github.io/fewsats-python)
-    *   [L402 Websiste](https://L402.org)
+    *   [L402 Website](https://L402.org)
 
 ## 6. Lexe
 
@@ -78,7 +78,7 @@ This guide introduces the primary tools for the Goose + Bitcoin Hackathon. Under
     *   Build production-ready solutions FAST with their SDK.
 *   **Key Links**:
     *   [Lexe Website](https://lexe.app/)
-    *   [Lexe SDK](https://github.com/lexe-app/lexe-sidecar-sdk/)
+    *   [Lexe Sidecar SDK](https://github.com/lexe-app/lexe-sidecar-sdk/)
 
 ## 7. Spark Wallet
 
@@ -86,6 +86,7 @@ This guide introduces the primary tools for the Goose + Bitcoin Hackathon. Under
 *   **Key Features**:
     *   User-friendly interface for managing Bitcoin and Lightning.
     *   Often highlighted for its clear design and robust functionality.
+    *   Deploy self-custodial Bitcoin wallets in a scalable and developer-friendly way.
 *   **Hackathon Edge**:
     *   Good as a user-facing wallet for testing transactions.
     *   Can be another option for participants looking for a solid mobile or desktop wallet experience.
@@ -107,6 +108,29 @@ This guide introduces the primary tools for the Goose + Bitcoin Hackathon. Under
     *   [Source Code](https://github.com/nostrband/nwc-enclaved): Service description, including rationale, tradeoffs and benefits.
     *   [Client Library](https://github.com/nostrband/nwc-enclaved-utils): JavaScript library to create wallets and LN addresses.
 
+## 9. OpenSecret Cloud / Maple
+
+*   **What it is**: A secure cloud platform for Bitcoin and Lightning applications, with Maple being a key component.
+*   **Key Features**:
+    *   Secure and private Bitcoin application hosting.
+    *   Encrypted data storage with Bitcoin-based authentication.
+    *   Maple provides tools for building Bitcoin-native applications.
+*   **Hackathon Edge**: Ideal for projects requiring secure storage and management of Bitcoin/Lightning data.
+*   **Key Links**:
+    *   [OpenSecret Cloud Documentation](https://docs.opensecret.cloud/)
+    *   [Maple GitHub Repository](https://github.com/OpenSecretCloud/Maple)
+
+## 10. Inference Grid
+
+*   **What it is**: A platform offering Lightning micropayment-based access to LLMs for building Bitcoin-native AI workflows.
+*   **Key Features**:
+    *   Pay-per-use access to various LLMs.
+    *   Bitcoin Lightning Network integration for micropayments.
+    *   API for seamless integration into applications.
+*   **Hackathon Edge**: Perfect for projects combining AI capabilities with Bitcoin payments, allowing for granular, usage-based pricing.
+*   **Key Links**:
+    *   [Inference Grid Website](https://www.inferencegrid.ai/)
+
 By understanding these tools and their specific strengths, you can better architect your hackathon project and leverage their combined power to create something truly innovative!
-=======
+
 Choose the right tools to innovate and build effectively during the hackathon!

@@ -2,7 +2,7 @@
 
 Welcome to a playbook repository for the Goose + Bitcoin Hackathon!
 
-This collection supercharges your experience, guiding you to build innovative projects merging **Block Goose** (AI-driven automation) with Bitcoin and the Lightning Network, featuring tools like **Alby**, **LDK**, **Lightspark**, **Fewsats**, and **Lexe**.
+This collection supercharges your experience, guiding you to build innovative projects merging **Block Goose** (AI-driven automation) with Bitcoin and the Lightning Network, featuring tools like **Alby**, **LDK**, **Lightspark**, **Fewsats**, **Lexe**, **Spark Wallet**, **OpenSecret Cloud/Maple**, and **Inference Grid**.
 
 ## Your Hackathon Toolkit 🛠️
 
@@ -33,6 +33,18 @@ The `RESOURCES/` directory also contains a curated list of additional learning m
 3.  **Best Practices are Key**: Review the **[Best Practices Guide](./PLAYBOOKS/COMMON/Best-Practices.md)**, especially on using Goose and LLMs effectively.
 4.  **Choose Your Project**: Select a playbook or devise your own idea.
 5.  **Setup & Build!**: Use the **[Setup Guides](./PLAYBOOKS/COMMON/Setup-Guides/)** and let the playbooks guide your development.
+
+## Featured Tools & Services
+
+* **Block Goose**: AI agent for automating development tasks
+* **Alby**: Bitcoin/Lightning wallet with developer API
+* **Lightning Dev Kit (LDK)**: Flexible library for custom Lightning solutions
+* **Lightspark**: Enterprise-grade Lightning Network platform
+* **Fewsats**: Payment infrastructure for AI agent transactions
+* **Lexe**: Self-custodial Bitcoin/Lightning wallet with [Sidecar SDK](https://github.com/lexe-app/lexe-sidecar-sdk)
+* **Spark Wallet**: Developer-friendly self-custodial Bitcoin wallet SDK
+* **OpenSecret Cloud/[Maple](https://github.com/OpenSecretCloud/Maple)**: Secure cloud platform for Bitcoin applications
+* **[Inference Grid](https://www.inferencegrid.ai/)**: Lightning micropayment-based access to LLMs
 
 ## Why Goose + Bitcoin? 🤔
 

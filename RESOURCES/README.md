@@ -35,11 +35,9 @@ This page provides links to valuable external resources, including official docu
 ### Fewsats
 *   **[Fewsats Website](https://www.fewsats.com/)**: Official website.
 *   **[Fewsats MCP Server GitHub Repository](https://github.com/Fewsats/fewsats-mcp)**: Let your agents pay using MCP.
-
 *   **[L402 Website](https://L402.org)**: Official website for the L402 protocol.
 *   **[L402 Paywalled Weather API](https://github.com/Fewsats/weather-api)**: Demo of an AI agent paying for API access.
 *   **[Proxy402](https://proxy402.com)**: Open source payment gateway for 402 paywalls. 
-
 
 ### Lexe
 *   **[Lexe Website](https://lexe.app/)**: Official website for the Lexe self-custodial Bitcoin and Lightning wallet (iOS & Android).
@@ -51,10 +49,14 @@ This page provides links to valuable external resources, including official docu
 ### Spark Wallet
 *   **[Spark Wallet Documentation](https://docs.spark.money/wallet/introduction)**: Bitcoin and Lightning wallet.
 
+### OpenSecret Cloud / Maple
+*   **[OpenSecret Cloud Documentation](https://docs.opensecret.cloud/)**: Documentation for the secure cloud platform for Bitcoin applications.
+*   **[Maple GitHub Repository](https://github.com/OpenSecretCloud/Maple)**: Source code and documentation for the Maple framework.
+
 ## AI + Crypto Services
 
 ### Inference Grid
-*   **[Inference Grid Website](https://www.inferencegrid.ai/)**: Decentralized AI inference paid with cryptocurrency.
+*   **[Inference Grid Website](https://www.inferencegrid.ai/)**: Lightning micropayment-based access to LLMs for building Bitcoin-native AI workflows.
 
 ### Nwc-enclaved Wallets
 *   **[Source Code](https://github.com/nostrband/nwc-enclaved)**: Source code and documentation for the NWC enclaved wallet service, covering its architecture, rationale, tradeoffs, and benefits.
