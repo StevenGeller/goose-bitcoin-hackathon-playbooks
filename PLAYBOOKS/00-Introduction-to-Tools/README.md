@@ -66,19 +66,19 @@ This guide introduces the primary tools for the Goose + Bitcoin Hackathon. Under
 
 ## 6. Lexe
 
-*   **What it is**: A self-custodial Bitcoin and Lightning wallet (iOS & Android) focused on user control, privacy, and rich features.
+*   **What it is**: A self-custodial Bitcoin and Lightning wallet (iOS & Android) focused on user control, ease-of-use, and rich features.
 *   **Key Features**:
-    *   Self-custodial; users control keys.
-    *   User-facing wallet with Nostr, LNURL, WebLN, and Tor support.
-    *   Supports Value 4 Value streaming payments.
+    *   Self-custodial; users retain full control of their private keys.
+    *   24/7 payment receiving, even when your phone is offline.
+    *   No subscription! Lexe will host your Lightning node for just 0.5% in fees per payment.
+    *   Receiving lots of payments? Lexe ensures you can always receive more, including small amounts.
 *   **Hackathon Edge**:
-    *   Excellent for testing transactions to/from your project.
-    *   Demonstrates a privacy-focused, self-custodial wallet.
-    *   WebLN support may enable browser-based dApp interactions.
-*   **Integration Note**: Lexe is primarily a user's personal wallet. It doesn't offer a general public API for backend integration like Alby. Interactions leverage standard protocols (LNURL, Nostr, WebLN).
+    *   Abstracts away the nuances (ex: channel management) of Lightning.
+    *   Provides a simple yet powerful self-custodial wallet.
+    *   Build production-ready solutions FAST with their SDK.
 *   **Key Links**:
     *   [Lexe Website](https://lexe.app/)
-    *   [Lexe Public GitHub](https://github.com/lexe-app/lexe-public)
+    *   [Lexe SDK](https://github.com/lexe-app/lexe-sidecar-sdk/)
 
 ## 7. Spark Wallet
 
