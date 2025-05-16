@@ -52,7 +52,7 @@ This guide introduces the primary tools for the Goose + Bitcoin Hackathon. Under
     *   [Lightspark Website](https://www.lightspark.com/)
     *   [Lightspark Documentation](https://docs.lightspark.com/lightspark-sdk/getting-started)
 
-## 5. FewSats
+## 5. Fewsats
 
 *   **What it is**: Payment infrastructure for secure, seamless transactions between AI agents, without disrupting their workflow.
 *   **Key Features**:
@@ -60,8 +60,9 @@ This guide introduces the primary tools for the Goose + Bitcoin Hackathon. Under
     *   CLI and API for integration.
 *   **Hackathon Edge**: Specialized for projects where multiple AI components need to exchange value or pay for services.
 *   **Key Links**:
-    *   [FewSats Website](https://www.fewsats.com/)
-    *   [FewSats CLI GitHub](https://github.com/Fewsats/fewsatscli)
+    *   [Fewsats Website](https://www.fewsats.com/)
+    *   [Fewsats Documentation](https://fewsats.github.io/fewsats-python)
+    *   [L402 Websiste](https://L402.org)
 
 ## 6. Lexe
 

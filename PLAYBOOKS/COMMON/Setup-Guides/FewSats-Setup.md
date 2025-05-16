@@ -1,51 +1,39 @@
-# FewSats Setup Guide
+# Fewsats Setup Guide
 
-FewSats enables secure AI agent-to-AI agent payments. Use this guide if your project needs this.
+Fewsats enables secure AI agent-to-AI agent payments. Use this guide if your project needs this.
 
-## 1. Understanding FewSats
+## 1. Understanding Fewsats
 
 *   **Purpose**: Allows AI agents to pay each other for services/data/API calls.
-*   **Components**: Typically an API and/or CLI.
+*   **Components**: Typically an API and/or AI Agent.
 
 ## 2. Sign Up & Get API Key
 
-1.  **Visit FewSats Website**: Go to official FewSats site (e.g., [fewsats.com](https://www.fewsats.com/) - *verify official URL*).
-2.  **Create Account**: Sign up via "Sign Up," "Get Started," or "Developers" section.
-3.  **Obtain API Key**: Find/generate an API key in your account settings/developer dashboard.
+1.  **Visit Fewsats Website**: Go to official [Fewsats](https://www.fewsats.com/) site.
+2.  **Create Account**: Sign up and configure your account.
+3.  **Create an API Key**: Create an API KEY in the developer dashboard.
     *   **Secure your API key.** Do not embed in client-side code or public repos.
+    *   **Policies**: you can add some safeguards to your API KEY limiting the amount it can be spend, how often, etc...
+4.  **Optional**: If you want to enable payments in an MCP Application (ex: Goose) install the [Fewsats MCP Server](https://github.com/Fewsats/fewsats-mcp).
 
 ## 3. Integration Methods
 
-Always refer to official FewSats documentation for specifics.
-
-*   **FewSats CLI**:
-    *   Install and configure per FewSats docs.
-    *   Useful for scripting or managing account/agent settings.
-    *   **Conceptual Example**: `fewsats-cli agent create --name myAIAgent`
-*   **FewSats API**: For deeper code integration.
-    *   Consult API docs for endpoints (agent registration, payments, status, balances).
-    *   Authenticate requests with your API key.
-*   **FewSats MCP Server (Multi-Currency Payments)**:
-    *   If relevant, refer to FewSats docs for connecting to/using the MCP server.
+*   **Fewsats SDK**: Python
+    *   The easist way to start coding agent payments in python.
+*   **Fewsats API**: 
+    *   You can always use conenct fewsats to your app using our Public API.
+    *   All requests need to be authenticated with your API Key.
+*   **Fewsats MCP Server (Model Context Protocol)**:
+    *   If relevant, refer to Fewsats docs for connecting to/using the [MCP server](https://github.com/Fewsats/fewsats-mcp).
 
 ## 4. How Block Goose Can Help
 
-*   **Script CLI**: Generate shell scripts for FewSats CLI.
-    *   `Goose Task Example: Bash script for fewsats-cli to send 50 units from agentA to agentB.`
-*   **Generate API Client Code**: Create Python/JS code for FewSats HTTP API.
-    *   `Goose Task Example: Python function for POST to 'https://api.fewsats.com/v1/payments' (JSON: from_agent, to_agent, amount) with Auth header for API key.` (Ensure API endpoint is correct from FewSats docs).
+*   **MCP Client**: Goose allows you to load MCP servers. It's the perfect application to play with MCP monetization.
+*   **Generate API Client Code**: Create Python/JS code for Fewsats HTTP API.
+    *   `Goose Task Example: Python function for POST to 'https://api.fewsats.com/v0/l402/offers'`.
 
 ## 5. Example Hackathon Use Case
 
-*   **Agent A** (Query Analyzer) needs data from **Agent B** (Paid API Data Fetcher/Processor).
-*   Agent A pays Agent B via FewSats.
-*   Agent B, on payment confirmation, performs task and returns data to Agent A.
-*   **See Also**: The [FewSats Weather API demo](https://github.com/Fewsats/weather-api) for a concrete example of an AI agent paying for API access.
-
-## 6. Key Setup Considerations
-
-*   **OFFICIAL DOCS ARE CRITICAL**: FewSats is specialized. **Rely on their latest official documentation.**
-*   **Security**: **Protect your FewSats API key.**
-*   **Hackathon Scope**: AI-to-AI payments can be complex. **Ensure it's core to your MVP or an optional extension.**
-
-Always use the latest official FewSats documentation for precise setup.
+You can use the Fewsats API in two ways:
+*   **As a Merchant**: Paywall your APIs and AI Agents using the L402 protocol
+*   **As a Consumer**: Pay for 402 offers using a simple API

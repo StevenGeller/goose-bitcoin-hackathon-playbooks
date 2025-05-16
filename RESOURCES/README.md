@@ -32,12 +32,14 @@ This page provides links to valuable external resources, including official docu
 *   **[Lightspark Documentation](https://docs.lightspark.com/)**: Main entry point for all Lightspark documentation.
 *   **[Lightspark SDKs - Quickstart](https://docs.lightspark.com/lightspark-sdk/quickstart)**: Get started quickly with Lightspark SDKs in various languages.
 
-### FewSats
-*   **[FewSats Website](https://www.fewsats.com/)**: Official website.
-*   **[FewSats CLI GitHub Repository](https://github.com/Fewsats/fewsatscli)**: For the command-line interface.
-*   **[FewSats Weather API Example](https://github.com/Fewsats/weather-api)**: Demo of an AI agent paying for API access.
-*   **[FewSats MCP Server GitHub Repository](https://github.com/Fewsats/fewsats-mcp)**: For the Multi-Currency Payments server.
-*   Check their GitHub repositories for the most current documentation and examples.
+### Fewsats
+*   **[Fewsats Website](https://www.fewsats.com/)**: Official website.
+*   **[Fewsats MCP Server GitHub Repository](https://github.com/Fewsats/fewsats-mcp)**: Let your agents pay using MCP.
+
+*   **[L402 Website](https://L402.org)**: Official website for the L402 protocol.
+*   **[L402 Paywalled Weather API](https://github.com/Fewsats/weather-api)**: Demo of an AI agent paying for API access.
+*   **[Proxy402](https://proxy402.com)**: Open source payment gateway for 402 paywalls. 
+
 
 ### Lexe
 *   **[Lexe Website](https://lexe.app/)**: Official website for the Lexe self-custodial Bitcoin and Lightning wallet (iOS & Android).
